@@ -1,0 +1,59 @@
+<!-- Modal -->
+<script type="text/javascript">
+	function validacorreo(){
+		var email = document.getElementById("email").value;
+		
+		var validEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		
+		if (!validEmail.test(email)){
+        	alert("Error: La dirección de correo " + email + " es incorrecta.");
+		}
+	}
+</script>
+<div class="modal fade" id="add_" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalLabel">AGREGAR DOCENTE</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<form method="POST" action="InsertRegistro.php" enctype="multipart/form-data">
+						<div class="row form-group">
+							<div class="row espacio">
+								<div class="col-6">
+									<label for="nombre">Nombre(s):</label>
+									<input type="text" class="form-control" name="nombre" id="nombre" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+								</div>
+								<div class="col-6">
+									<label for="apellidos">Apellidos:</label>
+									<input type="text" class="form-control" name="apellidos" id="apellidos" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+								</div>
+							</div>
+
+							<div class="row espacio">
+								<div class="col-6">
+									<label for="correo">Correo:</label>
+									<input type="email" class="form-control" name="email" id="email" required="required" onchange="validacorreo();">
+								</div>
+								<div class="col-6">
+									<label for="rol">Rol:</label>
+									<select class="form-select" name="rol" id="rol">
+										<option value="Administrador">Administrador</option>
+										<option value="Docente">Docente</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div id="cargando" class="loader" style="display: none" ></div>
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+							<button type="submit" name="editar" class="btn btn-primary" onclick="mostrar(); this.onclick=function(){return false}">Guardar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
