@@ -43,11 +43,13 @@ include "../temp/02.php";
 								            $rs=$mysqli->query($sq);
 											$row_cnt = $rs->num_rows;
 								             while ($row=$rs->fetch_array(MYSQLI_ASSOC)) 
-								             {   
+								             {
+												$num_lista = 1;
+												$num_lista++;   
 									?>
 								<tr>
 									
-								    <th scope="row"><?php for ($i = 1; $i <= $row_cnt; $i++) { echo $i; } ?></th>
+								    <th scope="row"><?php echo $num_lista;  ?></th>
 									<th scope="row"><?php echo $row['matricula']; ?></th>
 									<td><?php echo $row['nombre']; ?></td>
 									<td><?php echo $row['apellidos']; ?></td>
