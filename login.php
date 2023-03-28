@@ -20,7 +20,7 @@
                                     <!--End Logo -->
                                 
                                     <div class="pb-2">
-                                        <h5 class="card-title text-center pb-0 fs-4">Sistema de Control Escolarrrrr</h5>
+                                        <h5 class="card-title text-center pb-0 fs-4">Sistema de Control Escolar</h5>
                                         <p class="text-center small">Ingrese su nombre de usuario y contraseña</p>
                                     </div>
 
