@@ -22,6 +22,7 @@ include "../temp/02.php";
 								        $sqt="SELECT * FROM materia";
 								            $rst=$mysqli->query($sqt);
 								    ?>
+										<ol>
 								        <tr>
 								            <th scope="row">#</th>
 									        <th scope="row">Matricula</th>
@@ -71,7 +72,7 @@ include "../temp/02.php";
 									     ?>
 									
 								</tr>
-								
+											</ol>
 							</tbody>
 						</table>
 					</div>
