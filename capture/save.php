@@ -4,7 +4,7 @@ include "../db/var.php";
 include "../db/conect.php";
 
 foreach($_POST['materia'] as $materia) {
-    echo "<p>Materia recibida: $materia</p>";
+    echo $materia;
 }
 
 
