@@ -41,11 +41,16 @@ include "../temp/02.php";
 								    <?php
 								        $sq="SELECT * FROM alumnos";
 								            $rs=$mysqli->query($sq);
+											$row_cnt = $rs->num_rows;
 								             while ($row=$rs->fetch_array(MYSQLI_ASSOC)) 
-								             {   
+								             { 
+												
+												for ($i = 1; $i = $row_cnt; $i++) {
+													
+												  
 								?>
 								<tr>
-								    <th scope="row"><?php echo $row['Id']; ?></th>
+								    <th scope="row"><?php echo $i; }?></th>
 									<th scope="row"><?php echo $row['matricula']; ?></th>
 									<td><?php echo $row['nombre']; ?></td>
 									<td><?php echo $row['apellidos']; ?></td>
