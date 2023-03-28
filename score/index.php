@@ -22,9 +22,8 @@ include "../temp/02.php";
 								        $sqt="SELECT * FROM materia";
 								            $rst=$mysqli->query($sqt);
 								    ?>
-										<ol>
 								        <tr>
-								            <li>#</li>
+								            <th scope="row">#</th>
 									        <th scope="row">Matricula</th>
 									        <th>Nombre</th>
 									        <th>Apellidos</th>
@@ -48,8 +47,8 @@ include "../temp/02.php";
 									?>
 								<tr>
 									
-								    
-									<li scope="row"><?php echo $row['matricula']; ?></li>
+								    <th scope="row"><?php for ($i = 1; $i <= $row_cnt; $i++) { echo $i; } ?></th>
+									<th scope="row"><?php echo $row['matricula']; ?></th>
 									<td><?php echo $row['nombre']; ?></td>
 									<td><?php echo $row['apellidos']; ?></td>
 									
@@ -72,7 +71,7 @@ include "../temp/02.php";
 									     ?>
 									
 								</tr>
-											</ol>
+								
 							</tbody>
 						</table>
 					</div>
