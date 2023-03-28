@@ -44,7 +44,8 @@ include "../temp/02.php";
 											$row_cnt = $rs->num_rows;
 											for ($i = 1; $i = $row_cnt; $i++) { ?>
 									<tr>
-									<th scope="row"><?php echo $i; }?></th> <?php
+									<th scope="row"><?php echo $i; ?></th> <?php }
+
 								             while ($row=$rs->fetch_array(MYSQLI_ASSOC)) 
 								             { 
 												
