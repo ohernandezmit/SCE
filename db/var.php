@@ -1,6 +1,6 @@
 <?php
  $server="https://technologymit.com/";           // ************Nombre del servidor
- $server_name='https://technologymit.com/SCE/';// ************Nombre del servidor real
+ $server_name='https://technologymit.com/sceg/';// ************Nombre del servidor real
  // MySQL
 $MySQL_server   ='sql174.main-hosting.eu';
 $MySQL_user     ='u560186732_root';
