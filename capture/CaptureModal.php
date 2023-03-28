@@ -21,7 +21,7 @@
 							        <label for="materia"><?php echo $rowm['materia']; ?></label>
 							    </div>
 							    <div class="col-2">
-								    <input type="text" class="form-control" name="materia" id="materia[]" value="0">
+								    <input type="text" class="form-control" name="materia[]" id="materia" value="0">
 								</div>
 							</div>
 						</div>

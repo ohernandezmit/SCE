@@ -3,7 +3,9 @@
 include "../db/var.php";
 include "../db/conect.php";
 
-echo $materia = $_POST['materia'];
+foreach($_POST['materia'] as $materia) {
+    echo "<p>Materia recibida: $materia</p>";
+}
 
 
 //$sqlP = "INSERT periodo (periodo, nombre, fecha_ini, fecha_fin, activo) 
