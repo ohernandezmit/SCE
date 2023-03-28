@@ -41,10 +41,9 @@ include "../temp/02.php";
 								    <?php
 								        $sq="SELECT * FROM alumnos";
 								            $rs=$mysqli->query($sq);
-											$row_cnt = $rs->num_rows;
+											$num_lista = 0;
 								             while ($row=$rs->fetch_array(MYSQLI_ASSOC)) 
-								             {
-												$num_lista = 1;
+								             {												
 												$num_lista++;   
 									?>
 								<tr>
