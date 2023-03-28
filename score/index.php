@@ -24,7 +24,7 @@ include "../temp/02.php";
 								    ?>
 										<ol>
 								        <tr>
-								            <th scope="row">#</th>
+								            <li>#</li>
 									        <th scope="row">Matricula</th>
 									        <th>Nombre</th>
 									        <th>Apellidos</th>
@@ -48,8 +48,8 @@ include "../temp/02.php";
 									?>
 								<tr>
 									
-								    <th scope="row"><?php for ($i = 1; $i <= $row_cnt; $i++) { echo $i; } ?></th>
-									<th scope="row"><?php echo $row['matricula']; ?></th>
+								    
+									<li scope="row"><?php echo $row['matricula']; ?></li>
 									<td><?php echo $row['nombre']; ?></td>
 									<td><?php echo $row['apellidos']; ?></td>
 									
