@@ -30,8 +30,8 @@ if (empty($_SESSION["cuenta"])) {
 							<div class="col-6"></div>
 							<div class="col-6">
 								<p style="text-align: right">
-									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_" aria-expanded="false">
-										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Alumno</button>
+									<a type="button" class="btn btn-primary" href="alumnoNuevo.php"><i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Alumno</a>
+									
 								</p>
 							</div>
 						</div>
