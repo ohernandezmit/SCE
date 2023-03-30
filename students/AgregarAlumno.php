@@ -41,10 +41,11 @@
 									?>
 								</select>
 								</div>
-								<div class="col-3">
-									<label for="grado">Grado:</label>
-									<input type="text" class="form-control" name="grado" id="grado" placeholder="Grado del alumno" required="required">
-								</div>
+								<div class="col-sm-6" style="padding-bottom: 20px;">
+									<p>Nivel:</p>
+										<select id="select-nivel" name="select-nivel" class="form-control" onchange="load();" >
+										</select>
+ 							 	</div>
 								<div class="col-3">
 									<label for="grupo">Grupo:</label>
 									<input type="text" class="form-control" name="grupo" id="grupo" placeholder="Grupo del alumno" required="required">
@@ -78,3 +79,18 @@
 		</div>
 	</div>
 </div>
+<script> 		
+$(document).ready(function(){
+
+// Funcion para llenado de select  
+    
+    $("#select-turno").on('change', function () {
+        $("#select-turno option:selected").each(function () {
+            var turno = $(this).val();
+            //alert(turno);
+            $.post("consulta_nivel.php", { turno: turno }, function(data) {
+                $("#select-nivel").html(data);
+            });			
+        });
+ });
+ </script>
