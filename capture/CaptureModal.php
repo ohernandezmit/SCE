@@ -8,6 +8,8 @@
 			<div class="modal-body">
 				<div class="container-fluid">
 					<form method="POST" action="save.php" enctype="multipart/form-data">
+					    <input type="text" class="form-control" name="matricula" id="matricula" value="<?php echo $row['matricula']; ?>">
+					    <input type="text" class="form-control" name="id_ciclo" id="id_ciclo" value="<?php echo $row['id_ciclo']; ?>">
 					    <?php
 					        $grado = $row['id_grado'];
 					        $sqm="SELECT * FROM materia WHERE Id_grado = '$grado' ";
@@ -19,6 +21,7 @@
 							<div class="row espacio">
 							    <div class="col-4">
 							        <label for="materia"><?php echo $rowm['materia']; ?></label>
+							        <input type="text" class="form-control" name="id_materia[]" id="id_materia" value="<?php echo $rowm['Id']; ?>">
 							    </div>
 							    <div class="col-2">
 								    <input type="text" class="form-control" name="materia[]" id="materia" value="0">
