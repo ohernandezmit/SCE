@@ -46,7 +46,7 @@
 					</nav>
 				</div>
 				
-				<!-- Fin de Calificaciones -->
+				<!-- Fin de Calificaciones --> 
 
 				<!-- Lista de Alumnos-->
 				<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseListas" aria-expanded="false" aria-controls="collapseListas">
