@@ -2,9 +2,12 @@
     require '../lib/fpdf185/fpdf.php';  include "../db/var.php";
     include "../db/conect.php";
 
+    ini_set('date.timezone', 'America/Mexico_City');
+    $fecha = date('d/m/Y');
+
     class PDF extends FPDF {
         // Cabecera de página
-        function cabecera(){
+        function cabecera($fecha){
             $this->SetFont('Times','',8);
             $this->Cell(190,10,$fecha,0,1,'R');
             $this->SetFillColor(255,255,255);
@@ -14,7 +17,7 @@
             $this->Cell(145,8,"The American School of Tampico",55,10,'C',true);
             $this->SetFont('Times','',13);
             $this->SetY(25);$this->SetX(40);
-            $this->Cell(145,8,utf8_decode("Campaign ".$campaing),55,10,'C',false);
+            $this->Cell(145,8,utf8_decode("Campaign "),55,10,'C',false);
             $this->SetFont('Times','',11);
             $this->SetY(25);$this->SetX(90);
             $this->Line(20,33,190,33);$this->Line(20,33.5,190,33.5);$this->Line(20,33.6,190,33.6);
@@ -59,7 +62,7 @@
     $pdf = new PDF('P');
     $pdf->AliasNbPages();
     $pdf->AddPage();
-    $pdf->cabecera();
+    $pdf->cabecera($fecha);
     $pdf->columns();
     //$pdf->datas($campaing);
     $pdf->SetFont('Times','',12);
