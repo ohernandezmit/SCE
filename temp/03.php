@@ -23,6 +23,7 @@
 <script src="<?php echo $server_name; ?>lib/js/Chart.min.js"> </script>
 <script src="<?php echo $server_name; ?>lib/js/chart-area-demo.js"> </script>
 <script src="<?php echo $server_name; ?>lib/js/chart-bar-demo.js"> </script>
+<script src="<?php echo $server_name; ?>lib/js/duplicador.js"> </script>
 
 <!-- Template Main JS File -->
 <script src="<?php echo $server_name; ?>lib/js/main.js"> </script>
