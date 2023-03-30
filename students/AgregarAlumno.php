@@ -34,7 +34,7 @@
 											
 											while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
 																		
-											echo '<option value="'.$row['turno'].'">'.$row['turno'].'</option>';
+											echo '<option value="'.$row['Id'].'">'.$row['turno'].'</option>';
 																		
 											}	
 											?>
@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 // Funcion para llenado de select  
     
-    $("#select-turno").on('change', function () {
+$("#select-turno").on('change', function () {
         $("#select-turno option:selected").each(function () {
             var turno = $(this).val();
             alert(turno);
