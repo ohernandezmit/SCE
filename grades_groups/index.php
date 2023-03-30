@@ -146,7 +146,7 @@ $(document).ready(function(){
  
  // Funcion para agregar mas grupos
        	  	
-        $('#repeater').createRepeater();    
+        $('#repeater').repeater();    
 
         $('#repeater_form').on('submit', function(event){
             event.preventDefault();
