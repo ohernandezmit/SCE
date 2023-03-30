@@ -43,7 +43,7 @@
 								</div>
 								<div class="col-sm-6" style="padding-bottom: 20px;">
 									<p>Nivel:</p>
-										<select id="select-nivel" name="select-nivel" class="form-control" onchange="load();" >
+										<select id="select-nivel" name="select-nivel" class="form-control" >
 										</select>
  							 	</div>
 								<div class="col-3">
