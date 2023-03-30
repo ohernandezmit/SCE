@@ -21,7 +21,7 @@
 							<div class="row espacio">
 							    <div class="col-4">
 							        <label for="materia"><?php echo $rowm['materia']; ?></label>
-							        <input type="text" class="form-control" name="id_materia[]" id="id_materia" value="<?php echo $rowm['Id']; ?>">
+							        <input type="text" class="form-control" name="id_materia[]" id="id_materia" value="<?php echo $rowm['Id']; ?>" hidden>
 							    </div>
 							    <div class="col-2">
 								    <input type="text" class="form-control" name="materia[]" id="materia" value="0">
