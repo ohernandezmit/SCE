@@ -98,4 +98,6 @@ $("#select-turno").on('change', function () {
             });			
         });
  });
+
+});
  </script>
