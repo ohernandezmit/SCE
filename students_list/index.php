@@ -13,7 +13,7 @@
             $this->SetFillColor(255,255,255);
             $this->SetFont('Times','B',20);
             //$this->Image('../../../../../sys/img/ATS.png',15,14,25);
-            $this->SetY(17);$this->SetX(40);
+            $this->SetY(17);$this->SetX(42);
             $this->Cell(145,8,"The American School of Tampico",55,10,'C',true);
             $this->SetFont('Times','',13);
             $this->SetY(25);$this->SetX(40);
@@ -28,11 +28,8 @@
             $x_axis = 20; $y_axis = 40;
             $this->SetFont('Times','B',12);
             $this->SetY($y_axis);$this->SetX($x_axis);
-            $this->Cell(57,8,utf8_decode("Name"),0,0,'C',false);
-            $this->SetY($y_axis);$this->SetX($x_axis+57);
-            $this->Cell(57,8,utf8_decode("Pledged"),0,0,'C',false);
-            $this->SetY($y_axis);$this->SetX($x_axis+114);
-            $this->Cell(57,8,utf8_decode("Received"),0,0,'C',false);
+            $this->Cell(200,8,utf8_decode("Lista de Asistencia Cico Escolar xxxx - xxxx"),1,0,'C',false);
+            
             $this->Line(20,47,190,47);
     }
 
