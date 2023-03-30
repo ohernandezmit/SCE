@@ -58,7 +58,7 @@
 				</a>
 				<div class="collapse" id="collapseCalificaciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
 					<nav class="sb-sidenav-menu-nested nav">
-					    <a class="nav-link" href="<?php echo $server_name; ?>capture"><i class="bi bi-file-earmark-pdf"></i>&nbsp;&nbsp;PDF</a>
+					    <a class="nav-link" href="<?php echo $server_name; ?>students_list"><i class="bi bi-file-earmark-pdf"></i>&nbsp;&nbsp;PDF</a>
 						<a class="nav-link" href="<?php echo $server_name; ?>score"><i class="bi bi-file-earmark-excel"></i>&nbsp;&nbsp;Excel</a>
 					</nav>
 				</div>
