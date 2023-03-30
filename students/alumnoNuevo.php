@@ -49,13 +49,15 @@ include "../temp/02.php";
                                                     ?>
                                                 </select>
                                         </div>
-                                        <div class="col-sm-6" style="padding-bottom: 20px;">
+                                        <div class="col-sm-3" style="padding-bottom: 20px;">
                                             <p>Nivel:</p>
                                                 <select id="select-nivel" name="select-nivel" class="form-control" >
                                                 </select>
                                         </div>
-                                        <div class="col-3">
-                                            
+                                        <div class="col-sm-3" style="padding-bottom: 20px;">
+                                            <p>Grados y Grupos:</p>
+                                                <select id="select-grado" name="select-grado" class="form-control" >
+                                                </select>
                                         </div>
                                         <div class="col-3">
                                             
@@ -87,14 +89,26 @@ include "../temp/02.php";
 <script> 		
 $(document).ready(function(){
 
-// Funcion para llenado de select  
+// Funcion para llenado de niveles  
     
 $("#select-turno").on('change', function () {
         $("#select-turno option:selected").each(function () {
-            var turno = $(this).val();
+            //var turno = $(this).val();
             alert(turno);
             $.post("consulta_nivel.php", { turno: turno }, function(data) {
                 $("#select-nivel").html(data);
+            });			
+        });
+ });
+
+ // Funcion para llenado de grado y grupo 
+
+ $("#select-nivel").on('change', function () {
+        $("#select-nivel option:selected").each(function () {
+            var nivel = $(this).val();
+            //alert(nivel);
+            $.post("consulta_grado.php", { nivel: nivel }, function(data) {
+                $("#select-grado").html(data);
             });			
         });
  });
