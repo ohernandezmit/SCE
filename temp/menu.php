@@ -47,6 +47,22 @@
 				</div>
 				
 				<!-- Fin de Calificaciones -->
+
+				<!-- Lista de Alumnos-->
+				<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCalificaciones" aria-expanded="false" aria-controls="collapseCalificaciones">
+					<div class="sb-nav-link-icon">
+						<i class="bi bi-award"></i></div>
+					Listas Alumnos
+					<div class="sb-sidenav-collapse-arrow">
+						<i class="fas fa-angle-down"></i></div>
+				</a>
+				<div class="collapse" id="collapseCalificaciones" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+					<nav class="sb-sidenav-menu-nested nav">
+					    <a class="nav-link" href="<?php echo $server_name; ?>capture"><i class="bi bi-file-earmark-pdf"></i>&nbsp;&nbsp;PDF</a>
+						<a class="nav-link" href="<?php echo $server_name; ?>score"><i class="bi bi-file-earmark-excel"></i>&nbsp;&nbsp;Excel</a>
+					</nav>
+				</div>
+				<!-- Fin Lista de Alumnos -->
 				
 				<!-- Fin de Academico -->
 				
