@@ -24,7 +24,7 @@ $html = '';
 								
 								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
 								
-								$html .= '<option value="'.$row['Id'].'">'.$row['grado'].'° - '.$row['grupos'].'</option>';															
+								$html .= '<option value="'.$row['Id'].'">'.$row['grado'].'° '.$row['grupos'].'</option>';															
    
 }
 echo $html;
