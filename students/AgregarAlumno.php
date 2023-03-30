@@ -47,16 +47,10 @@
 										</select>
  							 	</div>
 								<div class="col-3">
-									<label for="grupo">Grupo:</label>
-									<input type="text" class="form-control" name="grupo" id="grupo" placeholder="Grupo del alumno" required="required">
+									
 								</div>
 								<div class="col-3">
-									<label for="turno">Turno:</label>
-									<select name="turno" id="urno" class="form-select">
-										<option value="">Selecciona el turno<option>
-										<option value="Matutino">Matutino</option>
-										<option value="Vespertino">Vespertino</option>
-									</select>
+									
 								</div>
 							</div>
 							
