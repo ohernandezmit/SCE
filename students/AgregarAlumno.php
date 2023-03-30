@@ -33,7 +33,7 @@
 								<div class="col-6">
 									<label for="turno">Turno:</label>
 									<select name="turno" id="urno" class="form-select">
-										<option value="">Selecciona el turno<option
+										<option value="">Selecciona el turno<option>
 										<option value="Matutino">Matutino</option>
 										<option value="Vespertino">Vespertino</option>
 									</select>

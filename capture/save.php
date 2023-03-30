@@ -2,6 +2,7 @@
 
 include "../db/var.php";
 include "../db/conect.php";
+include "../temp/01.php";
 
 $matricula = $_POST['matricula'];
 $id_ciclo = $_POST['id_ciclo'];
@@ -10,7 +11,7 @@ $materia_array = $_POST['materia'];
 
     $i=0;
     foreach($id_materia_array as $value){
-        echo $value.' - '.$materia_array[$i].'<br>';
+        //echo $value.' - '.$materia_array[$i].'<br>';
         $query = "INSERT INTO calificaciones (matricula, id_materia, id_ciclo, calificacion)
                             VALUE('$matricula','$value','$id_ciclo','$materia_array[$i]')";
         $rts = $mysqli->query($query);
@@ -18,5 +19,15 @@ $materia_array = $_POST['materia'];
 
         $i++;
     }
-
+    echo "
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '¡Capturado correctamente!',
+            button: 'OK',
+        })
+        .then(function() {
+            location.href = '$server_name/capture/';
+        });
+    </script>  ";
 ?>
