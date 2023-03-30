@@ -12,7 +12,7 @@ if (empty($_SESSION["cuenta"])) {
 }
 	
   include "../temp/01.php"; 
-       echo '<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>';    
+       echo '<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>';    
   include "../temp/02.php";
   $cuenta = $_SESSION['cuenta'];
   $fecha = date('Y/m/d');
