@@ -13,11 +13,11 @@ include "../temp/02.php";
 		<div class="card mb-4">
 			<div class="card-header">
 				<i class="fas fa-table me-1"></i>
-					Alumno Nuevooo
+					Alumno Nuevo
 					
 					<div class="card-body">
                             <div class="container-fluid">
-                            <form method="POST" action="InsertRegistro.php" enctype="multipart/form-data">
+                            <form method="POST" action="save.php" enctype="multipart/form-data">
                                 <div class="row form-group">
                                     <div class="row espacio">
                                         <div class="col-6">
@@ -25,7 +25,7 @@ include "../temp/02.php";
                                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required">
                                         </div>
                                         <div class="col-6">
-                                            <label for="apellido">Apellido:</label>
+                                            <label for="apellido">Apellidos:</label>
                                             <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido(s) del alumno" required="required">
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ include "../temp/02.php";
                                 <div class="modal-footer">
                                     <div id="cargando" class="loader" style="display: none" ></div>
                                     <a type="button" class="btn btn-secondary" href="index.php">Cancelar</a>
-                                    <button type="submit" name="editar" class="btn btn-primary" onclick="mostrar(); this.onclick=function(){return false}">Guardar</button>
+                                    <button type="submit" name="save" class="btn btn-primary">Guardar</button>
                                 </div>
                             </form>
                         </div>	
