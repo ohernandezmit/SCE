@@ -42,7 +42,7 @@ if (empty($_SESSION["cuenta"])) {
                 									    <?php
                 									        $gueryG = $mysqli->query("Select Id, grado, grupos FROM grados_grupos WHERE activo='0'");
                 									        While ($row=mysqli_fetch_array($gueryG)){ ?>
-                									            <option value="<?php $row['Id']; ?>"> <?php echo $row['grado'].''.$row['grupos']; ?></option>
+                									            <option value="<?php echo $row['Id']; ?>"> <?php echo $row['grado'].''.$row['grupos']; ?></option>
                 									   <?php } ?>
                 									</select>
                 								</div>
