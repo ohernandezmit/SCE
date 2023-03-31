@@ -24,7 +24,7 @@ function pdf(){
 			return false;
 		}	
 }
-<script>
+</script>
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
