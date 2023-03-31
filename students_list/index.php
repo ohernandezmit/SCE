@@ -16,6 +16,15 @@ if (empty($_SESSION["cuenta"])) {
   $cuenta = $_SESSION['cuenta'];
   $fecha = date('Y/m/d');
 ?>
+<script>
+function pdf(){
+	if ($("#grado").val() == "") {
+			alert("El campo Grado no puede estar vacío.");
+			$("#grado").focus();
+			return false;
+		}	
+}
+</script>
 
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
