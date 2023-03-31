@@ -29,7 +29,7 @@ if (empty($_SESSION["cuenta"])) {
                             <div class="col-2"></div>
 							<div class="col-8">
 							    <div class="container-fluid">
-                					<form method="POST" action="print.php" enctype="multipart/form-data">
+                					<form method="POST" enctype="multipart/form-data">
                 						<div class="row form-group">
                 						    <div class="row espacio">
                 						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
