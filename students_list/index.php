@@ -16,15 +16,7 @@ if (empty($_SESSION["cuenta"])) {
   $cuenta = $_SESSION['cuenta'];
   $fecha = date('Y/m/d');
 ?>
-<script>
-function pdf(){
-	if ($("#grado").val() == "") {
-			alert("El campo Grado no puede estar vacío.");
-			$("#grado").focus();
-			return false;
-		}	
-}
-</script>
+
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
@@ -37,7 +29,7 @@ function pdf(){
                             <div class="col-2"></div>
 							<div class="col-8">
 							    <div class="container-fluid">
-                					<form method="POST" id="form_alumnos" action="print.php" enctype="multipart/form-data">
+                					<form method="POST" action="print.php" enctype="multipart/form-data">
                 						<div class="row form-group">
                 						    <div class="row espacio">
                 						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
@@ -60,7 +52,7 @@ function pdf(){
                 						</div>
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
-                							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf();">
+                							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf(); this.onclick=function(){return false}">
 											<i class="bi bi-file-earmark-pdf"></i> PDF</button>
 											<button type="submit" name="editar" class="btn btn-success" onclick="exce(); this.onclick=function(){return false}">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
