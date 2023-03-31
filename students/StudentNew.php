@@ -13,20 +13,20 @@ include "../temp/02.php";
 		<div class="card mb-4">
 			<div class="card-header">
 				<i class="fas fa-table me-1"></i>
-					Alumno Nuevooo
+					Alumno Nuevo
 					
 					<div class="card-body">
                             <div class="container-fluid">
-                            <form method="POST" action="InsertRegistro.php" enctype="multipart/form-data">
+                            <form method="POST" action="save.php" enctype="multipart/form-data">
                                 <div class="row form-group">
                                     <div class="row espacio">
                                         <div class="col-6">
                                             <label for="nombre">Nombre:</label>
-                                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required">
+                                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                         <div class="col-6">
-                                            <label for="apellido">Apellido:</label>
-                                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido(s) del alumno" required="required">
+                                            <label for="apellido">Apellidos:</label>
+                                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido(s) del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                     </div>
                                     
@@ -67,15 +67,15 @@ include "../temp/02.php";
                                     <div class="row">
                                         <div class="col-12">
                                             <label for="curp">CURP:</label>
-                                            <input type="text" class="form-control" name="curp" id="curp" placeholder="CURP del alumno" required="required">	
+                                            <input type="text" class="form-control" name="curp" id="curp" placeholder="CURP del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">	
                                         </div>
                                     </div>
                                     
                                 </div>
                                 <div class="modal-footer">
                                     <div id="cargando" class="loader" style="display: none" ></div>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" name="editar" class="btn btn-primary" onclick="mostrar(); this.onclick=function(){return false}">Save</button>
+                                    <a type="button" class="btn btn-secondary" href="index.php">Cancelar</a>
+                                    <button type="submit" name="save" class="btn btn-primary">Guardar</button>
                                 </div>
                             </form>
                         </div>	
