@@ -5,10 +5,15 @@ include "../db/conect.php";
 include "../temp/01.php";
 
 echo $nombre = $_POST['nombre'];
+echo '-';
 echo $apellido = $_POST['apellido'];
+echo '-';
 echo $turno = $_POST['select-turno'];
+echo '-';
 echo $nivel = $_POST['select-nivel'];
+echo '-';
 echo $grado = $_POST['select-grado'];
+echo '-';
 echo $curp = $_POST['curp'];
 
     // $i=0;
