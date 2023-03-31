@@ -38,7 +38,7 @@ if (empty($_SESSION["cuenta"])) {
                 							    </div>
                 								<div class="col-6">
                 									<select name="grado" id="grado" class="form-select" required="required">
-                									    <option value="1">Selecciona una grado</option>
+                									    <option value=" ">Selecciona una grado</option>
                 									    <?php
                 									        $gueryG = $mysqli->query("Select Id, grado, grupos FROM grados_grupos WHERE activo='0'");
                 									        While ($row=mysqli_fetch_array($gueryG)){ ?>
