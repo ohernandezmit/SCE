@@ -52,6 +52,8 @@ if (empty($_SESSION["cuenta"])) {
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
                 							<button type="submit" name="editar" class="btn btn-primary" onclick="mostrar(); this.onclick=function(){return false}">Guardar</button>
+											<button type="submit" name="editar" class="btn btn-success" onclick="mostrar(); this.onclick=function(){return false}">
+											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
                 					</form>
 				                </div>
