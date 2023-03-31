@@ -16,6 +16,15 @@ if (empty($_SESSION["cuenta"])) {
   $cuenta = $_SESSION['cuenta'];
   $fecha = date('Y/m/d');
 ?>
+<script>
+function pdf(){
+	if ($("#grado").val() == "") {
+			alert("El campo Grado no puede estar vacío.");
+			$("#grado").focus();
+			return false;
+		}	
+}
+<script>
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
@@ -28,7 +37,7 @@ if (empty($_SESSION["cuenta"])) {
                             <div class="col-2"></div>
 							<div class="col-8">
 							    <div class="container-fluid">
-                					<form method="POST" action="print.php" enctype="multipart/form-data">
+                					<form method="POST" id="form_alumnos" action="print.php" enctype="multipart/form-data">
                 						<div class="row form-group">
                 						    <div class="row espacio">
                 						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
@@ -37,7 +46,7 @@ if (empty($_SESSION["cuenta"])) {
                 							    <div class="col-2">
                 							        <label for="grado">Grado:</label>
                 							    </div>
-                								<div class="col-6">
+                								<div class="col-10">
                 									<select name="grado" id="grado" class="form-select" required="required">
                 									    <option value=" ">Selecciona una grado</option>
                 									    <?php
@@ -51,9 +60,9 @@ if (empty($_SESSION["cuenta"])) {
                 						</div>
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
-                							<button type="submit" name="editar" class="btn btn-primary" onclick="mostrar(); this.onclick=function(){return false}">
+                							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf();">
 											<i class="bi bi-file-earmark-pdf"></i> PDF</button>
-											<button type="submit" name="editar" class="btn btn-success" onclick="mostrar(); this.onclick=function(){return false}">
+											<button type="submit" name="editar" class="btn btn-success" onclick="exce(); this.onclick=function(){return false}">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
                 					</form>
