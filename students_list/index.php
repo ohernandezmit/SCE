@@ -1,67 +1,64 @@
 <?php ini_set("display_errors","1");
-    require '../lib/fpdf185/fpdf.php';  include "../db/var.php";
-    include "../db/conect.php";
 
-    ini_set('date.timezone', 'America/Mexico_City');
-    $fecha = date('d/m/Y');
+include "../db/var.php";
+include "../db/conect.php";
 
-    class PDF extends FPDF {
-        // Cabecera de página
-        function cabecera($fecha){
-            $this->SetFont('Times','',8);
-            $this->Cell(190,10,$fecha,0,1,'R');
-            $this->SetFillColor(255,255,255);
-            $this->SetFont('Times','B',20);
-            //$this->Image('../../../../../sys/img/ATS.png',15,14,25);
-            $this->SetY(17);$this->SetX(42);
-            $this->Cell(145,8,"The American School of Tampico",55,10,'C',true);
-            $this->SetFont('Times','',13);
-            $this->SetY(25);$this->SetX(40);
-            $this->Cell(145,8,utf8_decode("Campaign "),55,10,'C',false);
-            $this->SetFont('Times','',11);
-            $this->SetY(25);$this->SetX(90);
-            $this->Line(20,33,190,33);$this->Line(20,33.5,190,33.5);$this->Line(20,33.6,190,33.6);
-            $this->Line(20,34.1,190,34.1);$this->Line(20,34.2,190,34.2);$this->Line(20,34.3,190,34.3);
-        }
+session_start();
+if (empty($_SESSION["cuenta"])) {
 
-        function columns(){
-            $x_axis = 20; $y_axis = 40;
-            $this->SetFont('Times','B',12);
-            $this->SetY($y_axis);$this->SetX($x_axis);
-            $this->Cell(200,8,utf8_decode("Lista de Asistencia Cico Escolar xxxx - xxxx"),1,0,'C',false);
-            
-            $this->Line(20,47,190,47);
-    }
+	header("Location: $server_name");
 
-        function datas($campaing){
-            $x_axis = 20; $y_axis = 48;
-            $x=1; $ok=true;
-            $this->SetFont('Times','',12);
-            
-            include "../../../../../sys/php/global.php"; include "../conexion.php";
-            $query = "SELECT b.Id, b.ac_name, SUM(a.pledged) as pledged, SUM(a.received) as received
-                    FROM gifts as a
-                    INNER JOIN accounts as b on a.id_acct = b.Id
-                    WHERE a.campaign='$campaing' GROUP BY b.ac_name ORDER BY b.Id asc";
-            $resultado = $mysqli->query($query);
-            while($cmp = $resultado->fetch_assoc()){
-                $this->SetY($y_axis);$this->SetX($x_axis);
-                $this->Cell(57,8,utf8_decode($cmp["ac_name"]),0,0,'L',false);
-                $this->SetY($y_axis);$this->SetX($x_axis+57);
-                $this->Cell(57,8,'$ '.$cmp["pledged"],0,0,'C',false);
-                $this->SetY($y_axis);$this->SetX($x_axis+114);
-                $this->Cell(57,8,'$ '.$cmp["received"],0,0,'C',false);
-            $x++; $y_axis = $y_axis+8;  
-            }
-        }
-    }
-
-    $pdf = new PDF('P');
-    $pdf->AliasNbPages();
-    $pdf->AddPage();
-    $pdf->cabecera($fecha);
-    $pdf->columns();
-    //$pdf->datas($campaing);
-    $pdf->SetFont('Times','',12);
-    $pdf->Output();
+	exit();
+}
+	
+  include "../temp/01.php";
+  include "../temp/02.php";
+  $cuenta = $_SESSION['cuenta'];
+  $fecha = date('Y/m/d');
 ?>
+<div id="layoutSidenav">
+  <?php include "../temp/menu.php"; ?>
+	<div id="layoutSidenav_content">
+	 <main>
+		<div class="card mb-4">
+			<div class="card-header">
+				<i class="bi bi-list-ol"></i> Listas de Alumnos
+					<div class="card-body">
+						<div class="row">
+							<div class="col-10">
+							    <div class="container-fluid">
+                					<form method="POST" action="print.php" enctype="multipart/form-data">
+                						<div class="row form-group">
+                						    <div class="row espacio">
+                						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
+                						    </div>
+                							<div class="row espacio">
+                							    <div class="col-2">
+                							        <label for="grado">Grado:</label>
+                							    </div>
+                								<div class="col-6">
+                									<select name="grado" id="grado" class="form-select" required="required">
+                									    <option value="1">Selecciona una grado</option>
+                									    <?php
+                									        $gueryG = $mysqli->query("Select Id, grado, grupos FROM grados_grupos WHERE activo='0'");
+                									        While ($row=mysqli_fetch_array($gueryG)){ ?>
+                									            <option value="<?php $row['Id']; ?>"> <?php echo $row['grado'].''.$row['grupos']; ?></option>
+                									   <?php } ?>
+                									</select>
+                								</div>
+                							</div>
+                						</div>
+                						<div class="modal-footer">
+                							<div id="cargando" class="loader" style="display: none" ></div>
+                							<button type="submit" name="editar" class="btn btn-primary" onclick="mostrar(); this.onclick=function(){return false}">Guardar</button>
+                						</div>
+                					</form>
+				                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
