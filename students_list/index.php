@@ -25,7 +25,8 @@ if (empty($_SESSION["cuenta"])) {
 				<i class="bi bi-list-ol"></i> Listas de Alumnos
 					<div class="card-body">
 						<div class="row">
-							<div class="col-10">
+                            <div class="col-2"></div>
+							<div class="col-8">
 							    <div class="container-fluid">
                 					<form method="POST" action="print.php" enctype="multipart/form-data">
                 						<div class="row form-group">
