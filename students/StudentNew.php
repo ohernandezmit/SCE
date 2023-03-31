@@ -22,11 +22,11 @@ include "../temp/02.php";
                                     <div class="row espacio">
                                         <div class="col-6">
                                             <label for="nombre">Nombre:</label>
-                                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required">
+                                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                         <div class="col-6">
                                             <label for="apellido">Apellidos:</label>
-                                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido(s) del alumno" required="required">
+                                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido(s) del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                     </div>
                                     
@@ -67,7 +67,7 @@ include "../temp/02.php";
                                     <div class="row">
                                         <div class="col-12">
                                             <label for="curp">CURP:</label>
-                                            <input type="text" class="form-control" name="curp" id="curp" placeholder="CURP del alumno" required="required">	
+                                            <input type="text" class="form-control" name="curp" id="curp" placeholder="CURP del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">	
                                         </div>
                                     </div>
                                     
