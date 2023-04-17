@@ -7,6 +7,14 @@
   include "../temp/02.php";
 
 ?>
+<script>
+    function pdf(){
+        var grado = $("#gradp").val(); alert(grado);
+    }
+    function excel(){
+        alert("Excel");
+    }
+</script>
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
