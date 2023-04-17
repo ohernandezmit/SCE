@@ -18,11 +18,8 @@ if (empty($_SESSION["cuenta"])) {
 ?>
 <script>
 function pdf(){
-	if ($("#grado").val() == "") {
-			alert("El campo Grado no puede estar vacío.");
-			$("#grado").focus();
-			return false;
-		}	
+	var grado = document.getElementById("grado").value;	
+	if(grado)
 }
 </script>
 
