@@ -58,7 +58,7 @@
 				</a>
 				<div class="collapse" id="collapseListas" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
 					<nav class="sb-sidenav-menu-nested nav">
-					    <a class="nav-link" href="<?php echo $server_name; ?>index"><i class="bi bi-file-earmark-pdf"></i>&nbsp;&nbsp;Imprimir</a>
+					    <a class="nav-link" href="<?php echo $server_name; ?>index"><i class="bi bi-file-earmark-pdf"></i>&nbsp;&nbsp;Imprimirr</a>
 					</nav>
 				</div>
 				<!-- Fin Lista de Alumnos -->
