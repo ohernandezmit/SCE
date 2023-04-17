@@ -5,16 +5,7 @@ include "../db/conect.php";
 include "../temp/session.php";	
 include "../temp/01.php";
 include "../temp/02.php";
-
-  $cuenta = $_SESSION['cuenta'];
-  $fecha = date('Y/m/d');
 ?>
-<script>
-function pdf(){
-	var grado = document.getElementById("grado").value;	
-	if(grado)
-}
-</script>
 
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
