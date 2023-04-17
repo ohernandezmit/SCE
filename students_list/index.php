@@ -2,17 +2,10 @@
 
 include "../db/var.php";
 include "../db/conect.php";
+include "../temp/session.php";	
+include "../temp/01.php";
+include "../temp/02.php";
 
-session_start();
-if (empty($_SESSION["cuenta"])) {
-
-	header("Location: $server_name");
-
-	exit();
-}
-	
-  include "../temp/01.php";
-  include "../temp/02.php";
   $cuenta = $_SESSION['cuenta'];
   $fecha = date('Y/m/d');
 ?>
