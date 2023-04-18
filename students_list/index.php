@@ -30,7 +30,7 @@
                 					<form method="POST" enctype="multipart/form-data">
                 						<div class="row form-group">
                 						    <div class="row espacio">
-                						        <h5>Elija el grado y grupo del que desea consultar sus resultados..</h5>
+                						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
                 						    </div>
                 							<div class="row espacio">
                 							    <div class="col-2">
@@ -50,9 +50,9 @@
                 						</div>
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
-                							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf(); this.onclick=function(){return false}">
+                							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf();">
 											<i class="bi bi-file-earmark-pdf"></i> PDF</button>
-											<button type="submit" name="editar" class="btn btn-success" onclick="exce(); this.onclick=function(){return false}">
+											<button type="submit" name="editar" class="btn btn-success" onclick="exce();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
                 					</form>
