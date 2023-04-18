@@ -50,7 +50,7 @@ include "../temp/02.php";
                 							<div id="cargando" class="loader" style="display: none" ></div>
                 							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf();">
 											<i class="bi bi-file-earmark-pdf"></i> PDF</button>
-											<button type="submit" name="editar" class="btn btn-success" onclick="exce();">
+											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
                 					</form>
