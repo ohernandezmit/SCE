@@ -30,7 +30,7 @@
                 					<form method="POST" enctype="multipart/form-data">
                 						<div class="row form-group">
                 						    <div class="row espacio">
-                						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
+                						        <h5>Elija el grado y grupo del que desea consultar sus resultados..</h5>
                 						    </div>
                 							<div class="row espacio">
                 							    <div class="col-2">
