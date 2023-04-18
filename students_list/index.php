@@ -40,8 +40,7 @@ include "../temp/02.php";
                 						</div>
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
-                							<button type="submit" name="editar" class="btn btn-primary" onclick=this.form.action="print.php">
-											<i class="bi bi-file-earmark-pdf"></i> PDF</button> 
+                							 
 											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
