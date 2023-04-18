@@ -48,7 +48,8 @@ include "../temp/02.php";
                 						</div>
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
-                							<input type="submit" name="enviar1" onclick=this.form.action="print.php">
+                							<!-- <input type="submit" name="enviar1" onclick=this.form.action="print.php"> -->
+											<a><img scr="../img/pdf.png"></a>
 											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
