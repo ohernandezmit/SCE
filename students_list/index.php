@@ -5,14 +5,6 @@ include "../temp/session.php";
 include "../temp/01.php";
 include "../temp/02.php";
 ?>
-<script>
-    function pdf(){
-        var grado = $("#grado").val(); alert(grado);
-    }
-    function excel(){
-        alert("Excel");
-    }
-</script>
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
@@ -28,7 +20,7 @@ include "../temp/02.php";
                 					<form method="POST" enctype="multipart/form-data">
                 						<div class="row form-group">
                 						    <div class="row espacio">
-                						        <h5>Elija el grado y grupo del que desea consultar sus resultados...</h5>
+                						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
                 						    </div>
                 							<div class="row espacio">
                 							    <div class="col-2">
