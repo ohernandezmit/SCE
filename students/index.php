@@ -23,7 +23,7 @@ if (empty($_SESSION["cuenta"])) {
 		<div class="card mb-4">
 			<div class="card-header">
 				<i class="fas fa-table me-1"></i>
-					Alumnos
+					Alumnossss
 					
 					<div class="card-body">
 						<div class="row">
