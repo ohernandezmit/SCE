@@ -12,7 +12,7 @@
 						<div class="row form-group">
 							<div class="row espacio">
 								<div class="col-6">
-									<label for="nombre">Nombre:</label>
+									<label for="nombre">Nombre<i>*</i>:</label>
 									<input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required">
 								</div>
 								<div class="col-6">
