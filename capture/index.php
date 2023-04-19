@@ -44,7 +44,7 @@
 								?>
 								<tr>
 									<th scope="row" class="text-center"><?php echo $row['matricula']; ?></th>
-									<td class="text-center"><?php echo $row['nombre'].' '.$row['apellidos']; ?></td>
+									<td><?php echo $row['nombre'].' '.$row['apellidos']; ?></td>
 									<td class="text-center"><?php echo $row['grado']; ?></td>
 									<td class="text-center"><?php echo $row['grupos']; ?></td>
 									<td class="text-center"><?php echo $capture; ?></td>
