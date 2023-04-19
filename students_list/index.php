@@ -10,7 +10,7 @@ include "../temp/02.php";
 function pdf(){
 		var grado = document.getElementById("grado").value; alert(grado);
 		
-			//window.location.href = print.php?grado=grado;
+			window.location.href = print.php+ "?gradi=" + grado;
 		
 	}
 
