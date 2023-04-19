@@ -21,7 +21,7 @@ include "../temp/02.php";
                                 <div class="row form-group">
                                     <div class="row espacio">
                                         <div class="col-6">
-                                            <label for="nombre">Nombre<i style="color:red; font-size: 10px; position: absolute; font-weight: bold;">*</i> :</label>
+                                            <label for="nombre">Nombre*:</label>
                                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                         <div class="col-6">
