@@ -6,7 +6,7 @@
     $fecha = date('d/m/Y');
     $grado = $_POST['grado'];
 
-    $query = "SELECT apellidos, nombre FROM alumnos WHERE id_grado='$grado' and id_ciclo='1' ORDER BY apellidos ASC;";
+    $query = "SELECT apellidos, nombre FROM alumnos WHERE id_grado='$grado' and id_ciclo='1' ORDER BY apellidos ASC";
     $resultado = $mysqli->query($query);
     $num = $resultado->num_rows;
     
