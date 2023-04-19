@@ -46,7 +46,7 @@ $spreadsheet->setActiveSheetIndex(0)
 	->setCellValue('Q8', '')
 	->setCellValue('R8', '');
 	
-	$spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(30);
+	$spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(5);
 	$spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(15);
 	$spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(25);
 	$spreadsheet->getActiveSheet()->getColumnDimension('E')->setWidth(15);
@@ -64,10 +64,10 @@ $spreadsheet->setActiveSheetIndex(0)
 	
 	
 	$frst = $mysqli->query("SELECT apellidos, nombre FROM alumnos WHERE id_grado='$grado' and id_ciclo='1' ORDER BY apellidos ASC");
-    $xx=1;
+    $xx=9; $i=1;
 	while ($fcmp = $frst->fetch_array(MYSQLI_ASSOC)) {
 					
-		$spreadsheet->getActiveSheet()->setCellValue('B'.$xx, $xx);
+		$spreadsheet->getActiveSheet()->setCellValue('B'.$xx, $i);
 		$spreadsheet->getActiveSheet()->setCellValue('C'.$xx, $fcmp['apellidos'].' '.$fcmp['nombre']);
 		$spreadsheet->getActiveSheet()->setCellValue('D'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('E'.$xx, '');
@@ -85,7 +85,7 @@ $spreadsheet->setActiveSheetIndex(0)
 		$spreadsheet->getActiveSheet()->setCellValue('P'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('Q'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('R'.$xx, '');
-		$xx++;	
+		$xx++;	$i++;
 	}
 
 $callStartTime = microtime(true);
