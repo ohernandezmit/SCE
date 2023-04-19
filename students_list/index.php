@@ -8,7 +8,7 @@ include "../temp/02.php";
 <script>
 
 function pdf(){
-		var grado = document.getElementById("grado"); alert(grado);
+		alert("PDF");
 	}
 
 	function excel(){
@@ -53,6 +53,8 @@ function pdf(){
                 							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf();">
 											 <i class="bi bi-file-earmark-pdf"></i> PDF</button> 
 											
+
+
 											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
