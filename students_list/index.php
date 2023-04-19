@@ -7,8 +7,8 @@ include "../temp/02.php";
 ?>
 <script>
 
-function pdf(destino){
-	var grado = document.getElementById("grado").value; alert(grado);
+function enviar(destino){
+	//var grado = document.getElementById("grado").value; alert(grado);
 	document.formulario.action = destino;
 	document.formulario.submit();
 		
@@ -56,10 +56,10 @@ function pdf(destino){
                 							<!-- <button type="submit" name="editar" class="btn btn-primary" onclick="pdf('print.php');">
 											 <i class="bi bi-file-earmark-pdf"></i> PDF</button>  -->
 											
-											<input type="button" name="enviar1" id="enviar1" value="PDF" onclick="pdf('print.php')">
-
-											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
-											<i class="bi bi-file-earmark-excel"></i> Excel</button>
+											<input type="button" name="enviar1" id="enviar1" value="PDF" onclick="enviar('print.php')">
+											<input type="button" name="enviar2" id="enviar2" value="Excel" onclick="enviar('excel.php')">							
+											<!-- <button type="submit" name="editar" class="btn btn-success" onclick="excel();">
+											<i class="bi bi-file-earmark-excel"></i> Excel</button> -->
                 						</div>
                 					</form>
 				                </div>
