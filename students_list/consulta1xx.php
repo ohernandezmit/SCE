@@ -1,18 +1,18 @@
 <?php
 $spreadsheet->getActiveSheet()->getStyle('E1:L7')
 ->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_TOP);
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('E1:L1');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('E2:L2')->setCellValue('E2', '2022 Año del Quincentenario de Toluca, Capital del Estado de México');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('E3:L3')->setCellValue('E3', 'Esc. Sec. Offic. No. 0000 "Nombre Escuela');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('E4:L4');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('E5:L5')->setCellValue('E5', "Listas de Asistencia Ciclo Escolar 2022 - 2023");
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D1:L1');
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D2:L2')->setCellValue('D2', '2022 Año del Quincentenario de Toluca, Capital del Estado de México');
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D3:L3')->setCellValue('D3', 'Esc. Sec. Offic. No. 0000 "Nombre Escuela');
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D4:L4');
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D5:L5')->setCellValue('D5', "Listas de Asistencia Ciclo Escolar 2022 - 2023");
 //$spreadsheet->setActiveSheetIndex(0)->mergeCells('A6:H6')->setCellValue('A6', 'Periodo: '.$periodox);
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('E7:L7');
-$spreadsheet->getActiveSheet()->getStyle('E1:L1')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
-$spreadsheet->getActiveSheet()->getStyle('E4:L4')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
-$spreadsheet->getActiveSheet()->getStyle('E2:L2')->getFont()->setName('Copperplate Gothic Light')->setSize(14)->setBold(true);
-$spreadsheet->getActiveSheet()->getStyle('E3:L3')->getFont()->setName('Copperplate Gothic Light')->setSize(12)->setBold(true);
-$spreadsheet->getActiveSheet()->getStyle('E5:L7')->getFont()->setName('Calibri')->setSize(11)->setBold(true);
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D7:L7');
+$spreadsheet->getActiveSheet()->getStyle('D1:L1')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
+$spreadsheet->getActiveSheet()->getStyle('D4:L4')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
+$spreadsheet->getActiveSheet()->getStyle('D2:L2')->getFont()->setName('Copperplate Gothic Light')->setSize(14)->setBold(true);
+$spreadsheet->getActiveSheet()->getStyle('D3:L3')->getFont()->setName('Copperplate Gothic Light')->setSize(12)->setBold(true);
+$spreadsheet->getActiveSheet()->getStyle('D5:L7')->getFont()->setName('Calibri')->setSize(11)->setBold(true);
 //-------------------------------------------IMAGEN
 $objDrawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
 $objDrawing->setName('ATS Logo');
