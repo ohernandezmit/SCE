@@ -9,7 +9,9 @@ include "../temp/02.php";
 
 function pdf(){
 		var grado = document.getElementById("grado").value; alert(grado);
-		location.href = "print.php?grado=grado";
+		if( grado == 0){
+			alert("Favor de seleccionar un grado");
+		}
 	}
 
 	function excel(){
