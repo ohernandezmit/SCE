@@ -28,23 +28,23 @@ $spreadsheet->getActiveSheet()->getStyle('A1:R8')->getAlignment()->setVertical(P
 $spreadsheet->getActiveSheet()->getStyle('B8:R8')->getFont()->getColor()->setARGB(\PhpOffice\PhpSpreadsheet\Style\Color::COLOR_WHITE);
 cellColor('B8:R8','000000');
 $spreadsheet->setActiveSheetIndex(0)
-	->setCellValue('B8', 'Nombre')
-	->setCellValue('C8', 'Fecha Solicitud')
-	->setCellValue('D8', 'DescripciÓn')
-	->setCellValue('E8', 'Fecha Limite')
-	->setCellValue('F8', 'Area')
-	->setCellValue('G8', 'C')
-	->setCellValue('H8', 'R')
-	->setCellValue('I8', 'S')
-	->setCellValue('J8', 'L')
-	->setCellValue('K8', 'F')
-	->setCellValue('L8', 'O')
-	->setCellValue('M8', 'Prioridad')
-	->setCellValue('N8', 'Estatus')
-	->setCellValue('O8', 'Responsable')
-	->setCellValue('P8', 'Observaciones MTTO')
-	->setCellValue('Q8', 'Fecha Entrega')
-	->setCellValue('R8', 'Encargado');
+	->setCellValue('B8', '#')
+	->setCellValue('C8', 'Nombre')
+	->setCellValue('D8', '')
+	->setCellValue('E8', '')
+	->setCellValue('F8', '')
+	->setCellValue('G8', '')
+	->setCellValue('H8', '')
+	->setCellValue('I8', '')
+	->setCellValue('J8', '')
+	->setCellValue('K8', '')
+	->setCellValue('L8', '')
+	->setCellValue('M8', '')
+	->setCellValue('N8', '')
+	->setCellValue('O8', '')
+	->setCellValue('P8', '')
+	->setCellValue('Q8', '')
+	->setCellValue('R8', '');
 	
 	$spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(30);
 	$spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(15);
@@ -63,46 +63,31 @@ $spreadsheet->setActiveSheetIndex(0)
 	$spreadsheet->getActiveSheet()->getStyle('G:L')->getAlignment()->setHorizontal('center');
 	
 	
-	/* $frst = $mysqli->query("SELECT * FROM work_order WHERE notifico = 1 and seccion='$seccion' ORDER BY Id asc");
-	$xx=9; $C=''; $R=''; $S=''; $L=''; $F=''; $O='';
-	while ($fcmp = $frst->fetch_array(MYSQLI_ASSOC)) {
-		if ($fcmp['construccion']==1) { $C='X'; }
-		if ($fcmp['reparacion']==1) { $R='X'; }
-		if ($fcmp['sanitizacion']==1) { $S='X'; }
-		if ($fcmp['limpieza']==1) { $L='X'; }
-		if ($fcmp['fumigacion']==1) { $F='X'; }
-		if ($fcmp['otros']==1) {
-			$O='X';
-		}
+	$frst = $mysqli->query("SELECT apellidos, nombre FROM alumnos WHERE id_grado='$grado' and id_ciclo='1' ORDER BY apellidos ASC");
 
-		if ($fcmp['estatus']=='verde.png') {
-			$estatus='Completado';
-		}elseif ($fcmp['estatus']=='amarillo.png') {
-				$estatus='En proceso';
-			} else {
-				$estatus="No iniciado";
-			}
+	while ($fcmp = $frst->fetch_array(MYSQLI_ASSOC)) {
 					
-		$spreadsheet->getActiveSheet()->setCellValue('B'.$xx, $fcmp['solicito']);
-		$spreadsheet->getActiveSheet()->setCellValue('C'.$xx, $fcmp['fecha_solicitud']);
-		$spreadsheet->getActiveSheet()->setCellValue('D'.$xx, $fcmp['descripcion']);
-		$spreadsheet->getActiveSheet()->setCellValue('E'.$xx, $fcmp['fecha_limite']);
+		$spreadsheet->getActiveSheet()->setCellValue('B'.$xx, '#');
+		$spreadsheet->getActiveSheet()->setCellValue('C'.$xx, $fcmp['Nombre']);
+		$spreadsheet->getActiveSheet()->setCellValue('D'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('E'.$xx, '');
 		
-		$spreadsheet->getActiveSheet()->setCellValue('F'.$xx, $fcmp['ubicacion']);
-		$spreadsheet->getActiveSheet()->setCellValue('G'.$xx, $C);
-		$spreadsheet->getActiveSheet()->setCellValue('H'.$xx, $R);
-		$spreadsheet->getActiveSheet()->setCellValue('I'.$xx, $S);
-		$spreadsheet->getActiveSheet()->setCellValue('J'.$xx, $L);
-		$spreadsheet->getActiveSheet()->setCellValue('K'.$xx, $F);
-		$spreadsheet->getActiveSheet()->setCellValue('L'.$xx, $O);
-		$spreadsheet->getActiveSheet()->setCellValue('M'.$xx, $fcmp['prioridad']);
-		$spreadsheet->getActiveSheet()->setCellValue('N'.$xx, $estatus);
-		$spreadsheet->getActiveSheet()->setCellValue('O'.$xx, $fcmp['responsable']);
-		$spreadsheet->getActiveSheet()->setCellValue('P'.$xx, $fcmp['obs_mant']);
-		$spreadsheet->getActiveSheet()->setCellValue('Q'.$xx, $fcmp['fecha_e']);
-		$spreadsheet->getActiveSheet()->setCellValue('R'.$xx, $fcmp['encargado']);
+		$spreadsheet->getActiveSheet()->setCellValue('F'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('G'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('H'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('I'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('J'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('K'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('L'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('M'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('N'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('O'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('P'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('Q'.$xx, '');
+		$spreadsheet->getActiveSheet()->setCellValue('R'.$xx, '');
 		$xx++;	
-	} */
+	}
+    
 $callStartTime = microtime(true);
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="Lista de asistencia.xlsx"');
