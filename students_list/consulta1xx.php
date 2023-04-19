@@ -68,7 +68,7 @@ $spreadsheet->setActiveSheetIndex(0)
 	while ($fcmp = $frst->fetch_array(MYSQLI_ASSOC)) {
 					
 		$spreadsheet->getActiveSheet()->setCellValue('B'.$xx, $xx);
-		$spreadsheet->getActiveSheet()->setCellValue('C'.$xx, $fcmp['Nombre']);
+		$spreadsheet->getActiveSheet()->setCellValue('C'.$xx, $fcmp['apellidos'].' '.$fcmp['nombre']);
 		$spreadsheet->getActiveSheet()->setCellValue('D'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('E'.$xx, '');
 		
