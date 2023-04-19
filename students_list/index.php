@@ -8,7 +8,7 @@ include "../temp/02.php";
 <script>
 
 function pdf(){
-		var grado = document.getElementById("grado"); alert(grado);
+		var grado = document.getElementById("grado").value; alert(grado);
 		location.href = "print.php?grado=grado";
 	}
 
