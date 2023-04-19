@@ -23,7 +23,7 @@ include "../temp/02.php";
 							<div class="col-8">
 							    <div class="container-fluid">
                 					<form method="POST" enctype="multipart/form-data">
-                						<div class="row form-group" style="padding-bottom: 25px;" >
+                						<div class="row form-group" style="padding-bottom: 15px;" >
                 						    <div class="row espacio">
                 						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
                 						    </div>
