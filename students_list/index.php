@@ -13,7 +13,7 @@ function pdf(destino){
 	document.formulario.submit();	
 }
 
-function excel(){
+function excel(destino){
 	document.formulario.action = destino;
 	document.formulario.submit();
 }
