@@ -47,21 +47,13 @@ $spreadsheet->setActiveSheetIndex(0)
 	->setCellValue('R8', '');
 	
 	$spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(5);
-	$spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(15);
-	$spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(25);
-	$spreadsheet->getActiveSheet()->getColumnDimension('E')->setWidth(15);
-	$spreadsheet->getActiveSheet()->getColumnDimension('F')->setWidth(20);
-	$spreadsheet->getActiveSheet()->getColumnDimension('N')->setWidth(15);
-	$spreadsheet->getActiveSheet()->getColumnDimension('O')->setWidth(25);
-	$spreadsheet->getActiveSheet()->getColumnDimension('P')->setWidth(25);
-	$spreadsheet->getActiveSheet()->getColumnDimension('Q')->setWidth(15);
-	$spreadsheet->getActiveSheet()->getColumnDimension('R')->setWidth(20);
+	$spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(40);
+	$spreadsheet->getActiveSheet()->getColumnDimension('D:R')->setWidth(10);
 	
 	$spreadsheet->getActiveSheet()->getStyle('C')->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_DATE_DATETIME);
 	$spreadsheet->getActiveSheet()->getStyle('E')->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_DATE_DATETIME);
 	$spreadsheet->getActiveSheet()->getStyle('B8:R8')->getAlignment()->setHorizontal('center');
 	$spreadsheet->getActiveSheet()->getStyle('G:L')->getAlignment()->setHorizontal('center');
-	
 	
 	$frst = $mysqli->query("SELECT apellidos, nombre FROM alumnos WHERE id_grado='$grado' and id_ciclo='1' ORDER BY apellidos ASC");
     $xx=9; $i=1;
