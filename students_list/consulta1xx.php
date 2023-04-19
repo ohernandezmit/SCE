@@ -64,10 +64,10 @@ $spreadsheet->setActiveSheetIndex(0)
 	
 	
 	$frst = $mysqli->query("SELECT apellidos, nombre FROM alumnos WHERE id_grado='$grado' and id_ciclo='1' ORDER BY apellidos ASC");
-
+    $xx=1;
 	while ($fcmp = $frst->fetch_array(MYSQLI_ASSOC)) {
 					
-		$spreadsheet->getActiveSheet()->setCellValue('B'.$xx, '#');
+		$spreadsheet->getActiveSheet()->setCellValue('B'.$xx, $xx);
 		$spreadsheet->getActiveSheet()->setCellValue('C'.$xx, $fcmp['Nombre']);
 		$spreadsheet->getActiveSheet()->setCellValue('D'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('E'.$xx, '');
@@ -87,7 +87,7 @@ $spreadsheet->setActiveSheetIndex(0)
 		$spreadsheet->getActiveSheet()->setCellValue('R'.$xx, '');
 		$xx++;	
 	}
-    
+
 $callStartTime = microtime(true);
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="Lista de asistencia.xlsx"');
