@@ -6,7 +6,7 @@ $spreadsheet->setActiveSheetIndex(0)->mergeCells('D2:M2')->setCellValue('D2', '2
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D3:M3')->setCellValue('D3', 'Esc. Sec. Offic. No. 0000 "Nombre Escuela');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D4:M4');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D5:M5')->setCellValue('D5', "Listas de Asistencia Ciclo Escolar 2022 - 2023");
-$spreadsheet->getActiveSheet()->getStyle('D1:M5')->getAlignment()->setVertical(PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+$spreadsheet->getActiveSheet()->getStyle('D5')->getAlignment()->setVertical(PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D7:L7');
 $spreadsheet->getActiveSheet()->getStyle('D1:L1')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
 $spreadsheet->getActiveSheet()->getStyle('D4:L4')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
