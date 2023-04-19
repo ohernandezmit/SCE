@@ -6,13 +6,13 @@ $spreadsheet->setActiveSheetIndex(0)->mergeCells('D2:M2')->setCellValue('D2', '2
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D3:M3')->setCellValue('D3', 'Esc. Sec. Offic. No. 0000 "Nombre Escuela');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D4:M4');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D5:M5')->setCellValue('D5', "Listas de Asistencia Ciclo Escolar 2022 - 2023");
-//$spreadsheet->setActiveSheetIndex(0)->mergeCells('A6:H6')->setCellValue('A6', 'Periodo: '.$periodox);
+$spreadsheet->getActiveSheet()->getStyle('D1:M5')->getAlignment()->setVertical(PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D7:L7');
 $spreadsheet->getActiveSheet()->getStyle('D1:L1')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
 $spreadsheet->getActiveSheet()->getStyle('D4:L4')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
 $spreadsheet->getActiveSheet()->getStyle('D2:L2')->getFont()->setName('Copperplate Gothic Light')->setSize(14)->setBold(true);
 $spreadsheet->getActiveSheet()->getStyle('D3:L3')->getFont()->setName('Copperplate Gothic Light')->setSize(12)->setBold(true);
-$spreadsheet->getActiveSheet()->getStyle('D5:L7')->getFont()->setName('Calibri')->setSize(11)->setBold(true);
+$spreadsheet->getActiveSheet()->getStyle('D5:L7')->getFont()->setName('Calibri')->setSize(12)->setBold(true);
 //-------------------------------------------IMAGEN
 $objDrawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
 $objDrawing->setName('ATS Logo');
