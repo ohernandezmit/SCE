@@ -7,16 +7,10 @@ include "../temp/02.php";
 ?>
 <script>
 
-function pdf(){
-	//var grado = document.getElementById("grado").value; alert(grado);
-	
-	if(document.formulario.grado.value.lenght==0){
-		alert("Se requiere grado");
-		document.formulario.grado.focus();
-
-		return 0;
-	}
-	
+function pdf(destino){
+	var grado = document.getElementById("grado").value; alert(grado);
+	document.formulario.action = destino;
+	document.formulario.submit();
 		
 }
 
@@ -59,10 +53,10 @@ function pdf(){
                 						</div>
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
-                							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf();">
-											 <i class="bi bi-file-earmark-pdf"></i> PDF</button> 
+                							<!-- <button type="submit" name="editar" class="btn btn-primary" onclick="pdf('print.php');">
+											 <i class="bi bi-file-earmark-pdf"></i> PDF</button>  -->
 											
-
+											<input type="button" name="enviar1" id="enviar1" value="PDF" onclick="enviar('print.php')">
 
 											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
