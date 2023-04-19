@@ -105,11 +105,10 @@ $spreadsheet->setActiveSheetIndex(0)
 	} */
 $callStartTime = microtime(true);
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="Maintenance work orders - '.$seccion.'.xlsx"');
+header('Content-Disposition: attachment;filename="Lista de asistencia.xlsx"');
 header('Cache-Control: max-age=0');
 $objWriter = PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xlsx');
 $objWriter->save('php://output');
-//$objWriter->save('Bajas'.$periodox.' '.$fchahy.'.xlsx');
 $callEndTime = microtime(true);
 $callTime = $callEndTime - $callStartTime;
 ?>
