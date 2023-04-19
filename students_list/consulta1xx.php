@@ -2,7 +2,7 @@
 $spreadsheet->getActiveSheet()->getStyle('E1:L7')
 ->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_TOP);
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D1:L1');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('D2:L2')->setCellValue('D2', '2022 Año del Quincentenario de Toluca, Capital del Estado de México');
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D2:M2')->setCellValue('D2', '2022 Año del Quincentenario de Toluca, Capital del Estado de México');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D3:L3')->setCellValue('D3', 'Esc. Sec. Offic. No. 0000 "Nombre Escuela');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D4:L4');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D5:L5')->setCellValue('D5', "Listas de Asistencia Ciclo Escolar 2022 - 2023");
@@ -19,7 +19,7 @@ $objDrawing->setName('ATS Logo');
 $objDrawing->setDescription('MIT logo');
 $objDrawing->setPath('../img/favicon.png');       // filesystem reference for the image file
 $objDrawing->setHeight(80);                 // sets the image height to 36px (overriding the actual image height);
-$objDrawing->setCoordinates('J1');    // pins the top-left corner of the image to cell D24
+$objDrawing->setCoordinates('N1');    // pins the top-left corner of the image to cell D24
 $objDrawing->setOffsetX(10); $objDrawing->setOffsetY(20);                // pins the top left corner of the image at an offset of 10 points horizontally to the right of the top-left corner of the cell
 $objDrawing->setWorksheet($spreadsheet->getActiveSheet());
 // --------------------------------------------------
