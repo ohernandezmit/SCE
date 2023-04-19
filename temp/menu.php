@@ -51,7 +51,7 @@
 				<!-- Lista de Alumnos-->   
 				<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseListas" aria-expanded="false" aria-controls="collapseListas">
 					<div class="sb-nav-link-icon">
-						<i class="bi bi-award"></i></div>
+						<i class="bi bi-person-vcard"></i></div>
 					Listas Alumnos
 					<div class="sb-sidenav-collapse-arrow">
 						<i class="fas fa-angle-down"></i></div>
