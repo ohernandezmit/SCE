@@ -48,7 +48,6 @@ $spreadsheet->setActiveSheetIndex(0)
 	
 	$spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(5);
 	$spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(40);
-	$spreadsheet->getActiveSheet()->getColumnDimension('D:R')->setWidth(10);
 	
 	$spreadsheet->getActiveSheet()->getStyle('C')->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_DATE_DATETIME);
 	$spreadsheet->getActiveSheet()->getStyle('E')->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_DATE_DATETIME);
