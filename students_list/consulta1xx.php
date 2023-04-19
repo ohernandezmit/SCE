@@ -3,9 +3,9 @@ $spreadsheet->getActiveSheet()->getStyle('E1:L7')
 ->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_TOP);
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D1:L1');
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D2:M2')->setCellValue('D2', '2022 Año del Quincentenario de Toluca, Capital del Estado de México');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('D3:L3')->setCellValue('D3', 'Esc. Sec. Offic. No. 0000 "Nombre Escuela');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('D4:L4');
-$spreadsheet->setActiveSheetIndex(0)->mergeCells('D5:L5')->setCellValue('D5', "Listas de Asistencia Ciclo Escolar 2022 - 2023");
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D3:M3')->setCellValue('D3', 'Esc. Sec. Offic. No. 0000 "Nombre Escuela');
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D4:M4');
+$spreadsheet->setActiveSheetIndex(0)->mergeCells('D5:M5')->setCellValue('D5', "Listas de Asistencia Ciclo Escolar 2022 - 2023");
 //$spreadsheet->setActiveSheetIndex(0)->mergeCells('A6:H6')->setCellValue('A6', 'Periodo: '.$periodox);
 $spreadsheet->setActiveSheetIndex(0)->mergeCells('D7:L7');
 $spreadsheet->getActiveSheet()->getStyle('D1:L1')->getFont()->setName('Calibri')->setSize(10)->setBold(true);
@@ -23,7 +23,7 @@ $objDrawing->setCoordinates('N1');    // pins the top-left corner of the image t
 $objDrawing->setOffsetX(10); $objDrawing->setOffsetY(20);                // pins the top left corner of the image at an offset of 10 points horizontally to the right of the top-left corner of the cell
 $objDrawing->setWorksheet($spreadsheet->getActiveSheet());
 // --------------------------------------------------
-$spreadsheet->getActiveSheet()->getStyle('A8:R8')->getFont()->setName('Calibri')->setSize(9)->setBold(true);
+$spreadsheet->getActiveSheet()->getStyle('A8:R8')->getFont()->setName('Calibri')->setSize(12)->setBold(true);
 $spreadsheet->getActiveSheet()->getStyle('A1:R8')->getAlignment()->setVertical(PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
 $spreadsheet->getActiveSheet()->getStyle('B8:R8')->getFont()->getColor()->setARGB(\PhpOffice\PhpSpreadsheet\Style\Color::COLOR_WHITE);
 cellColor('B8:R8','000000');
@@ -62,7 +62,6 @@ $spreadsheet->setActiveSheetIndex(0)
 		$spreadsheet->getActiveSheet()->setCellValue('C'.$xx, $fcmp['apellidos'].' '.$fcmp['nombre']);
 		$spreadsheet->getActiveSheet()->setCellValue('D'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('E'.$xx, '');
-		
 		$spreadsheet->getActiveSheet()->setCellValue('F'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('G'.$xx, '');
 		$spreadsheet->getActiveSheet()->setCellValue('H'.$xx, '');
