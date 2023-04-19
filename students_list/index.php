@@ -5,6 +5,11 @@ include "../temp/session.php";
 include "../temp/01.php";
 include "../temp/02.php";
 ?>
+<script>
+	function excel(){
+		alert("Excel");
+	}
+</script>
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
