@@ -30,7 +30,7 @@ function enviar(destino){
                             <div class="col-2"></div>
 							<div class="col-8">
 							    <div class="container-fluid">
-                					<form action="formulario" method="POST" enctype="multipart/form-data">
+                					<form name="formulario" method="POST" enctype="multipart/form-data">
                 						<div class="row form-group" style="padding-bottom: 10px;" >
                 						    <div class="row espacio">
                 						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
