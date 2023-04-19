@@ -39,7 +39,7 @@ $fecha = date('Y/m/d');
 						<table id="datatablesSimple">
 							<thead>
 								<tr>
-									<th class="text-center">Periodo Escolar</th>
+									<th class="text-center">Ciclo Escolar</th>
 									<th class="text-center">Nombre</th>
 									<th class="text-center">Fecha Inicio</th>
 									<th class="text-center">Fecha Fin</th>
