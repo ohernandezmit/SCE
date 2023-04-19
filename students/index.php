@@ -24,7 +24,6 @@ if (empty($_SESSION["cuenta"])) {
 			<div class="card-header">
 				<i class="fas fa-table me-1"></i>
 					Alumnos
-					
 					<div class="card-body">
 						<div class="row">
 							<div class="col-6"></div>
