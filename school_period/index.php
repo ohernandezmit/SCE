@@ -23,7 +23,7 @@ $fecha = date('Y/m/d');
 			<div class="card mb-4">
 				<div class="card-header">
 					<i class="fas fa-table me-1"></i>
-					Periodo
+					Ciclo Escolar
 
 					<div class="card-body">
 						<div class="row">
@@ -31,7 +31,7 @@ $fecha = date('Y/m/d');
 							<div class="col-6">
 								<p style="text-align: right">
 									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_" aria-expanded="false">
-										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Periodo</button>
+										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Nuevo Ciclo</button>
 								</p>
 							</div>
 						</div>
@@ -39,7 +39,7 @@ $fecha = date('Y/m/d');
 						<table id="datatablesSimple">
 							<thead>
 								<tr>
-									<th class="text-center">Periodo Escolar</th>
+									<th class="text-center">Ciclo Escolar</th>
 									<th class="text-center">Nombre</th>
 									<th class="text-center">Fecha Inicio</th>
 									<th class="text-center">Fecha Fin</th>

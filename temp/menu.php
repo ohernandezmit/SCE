@@ -74,7 +74,7 @@
 				<a class="nav-link" href="<?php echo $server_name; ?>school_period">
 					<div class="sb-nav-link-icon">
 						<i class="bi bi-calendar-week"></i></div>
-						Periodo
+						Ciclo Escolar
 				</a>
 				
 				<!-- DOCENTES -->

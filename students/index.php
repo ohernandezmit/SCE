@@ -43,7 +43,6 @@ if (empty($_SESSION["cuenta"])) {
 									<th class="text-center">Grado</th>
 									<th class="text-center">Grupo</th>
 									<th class="text-center">Curp</th>
-									<th class="text-center">Turno</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -61,7 +60,6 @@ if (empty($_SESSION["cuenta"])) {
 									<td class="text-center"><?php echo $row['grado']; ?></td>
 									<td class="text-center"><?php echo $row['grupos']; ?></td>
 									<td class="text-center"><?php echo $row['curp']; ?></td>
-									<td class="text-center"><?php echo $row['turno']; ?></td>
 								</tr>
 								<?php } ?>
 							</tbody>

@@ -4,17 +4,12 @@ include "../db/var.php";
 include "../db/conect.php";
 include "../temp/01.php";
 
-// echo $nombre = $_POST['nombre'];
-// echo '-';
-// echo $apellido = $_POST['apellido'];
-// echo '-';
-// echo $turno = $_POST['select-turno'];
-// echo '-';
-// echo $nivel = $_POST['select-nivel'];
-// echo '-';
-// echo $grado = $_POST['select-grado'];
-// echo '-';
-// echo $curp = $_POST['curp'];
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$turno = $_POST['select-turno'];
+$nivel = $_POST['select-nivel'];
+$grado = $_POST['select-grado'];
+$curp = $_POST['curp'];
 
         $query = "INSERT INTO alumnos (nombre, apellidos, id_grado, id_ciclo, curp, turno, activo)
                             VALUE('$nombre','$apellido','$grado','1', '$curp', '$turno', '1')";
