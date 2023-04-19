@@ -8,11 +8,17 @@ include "../temp/02.php";
 <script>
 
 function pdf(){
-		var grado = document.getElementById("grado").value; alert(grado);
-		
-			window.location.href = print.php+ "?gradi=" + grado;
-		
+	//var grado = document.getElementById("grado").value; alert(grado);
+	
+	if(document.formulario.grado.value.lenght==0){
+		alert("Se requiere grado");
+		document.formulario.grado.focus();
+
+		return 0;
 	}
+	
+		
+}
 
 	function excel(){
 		alert("Excel");
@@ -30,7 +36,7 @@ function pdf(){
                             <div class="col-2"></div>
 							<div class="col-8">
 							    <div class="container-fluid">
-                					<form method="POST" enctype="multipart/form-data">
+                					<form action="formulario" method="POST" enctype="multipart/form-data">
                 						<div class="row form-group" style="padding-bottom: 10px;" >
                 						    <div class="row espacio">
                 						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
