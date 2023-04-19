@@ -9,7 +9,7 @@ if (PHP_SAPI == 'cli')
 	die('This example should only be run from a Web Browser');
 include "../db/var.php";
 include "../db/conect.php";
-require '../sys/php/vendor/autoload.php';
+require '../lib/vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\IOFactory;
