@@ -56,7 +56,7 @@ function pdf(destino){
                 							<!-- <button type="submit" name="editar" class="btn btn-primary" onclick="pdf('print.php');">
 											 <i class="bi bi-file-earmark-pdf"></i> PDF</button>  -->
 											
-											<input type="button" name="enviar1" id="enviar1" value="PDF" onclick="enviar('print.php')">
+											<input type="button" name="enviar1" id="enviar1" value="PDF" onclick="pdf('print.php')">
 
 											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
