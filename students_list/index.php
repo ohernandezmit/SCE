@@ -6,6 +6,11 @@ include "../temp/01.php";
 include "../temp/02.php";
 ?>
 <script>
+
+function pdf(){
+		alert("PDF");
+	}
+
 	function excel(){
 		alert("Excel");
 	}
@@ -23,7 +28,7 @@ include "../temp/02.php";
 							<div class="col-8">
 							    <div class="container-fluid">
                 					<form method="POST" enctype="multipart/form-data">
-                						<div class="row form-group" style="padding-bottom: 15px;" >
+                						<div class="row form-group" style="padding-bottom: 10px;" >
                 						    <div class="row espacio">
                 						        <h5>Elija el grado y grupo del que desea consultar sus resultados.</h5>
                 						    </div>
@@ -45,8 +50,8 @@ include "../temp/02.php";
                 						</div>
                 						<div class="modal-footer">
                 							<div id="cargando" class="loader" style="display: none" ></div>
-                							<button type="submit" name="editar" class="btn btn-primary" >
-											<i class="bi bi-file-earmark-pdf"></i> PDF</button> 
+                							<button type="submit" name="editar" class="btn btn-primary" onclick="pdf(); >
+											/* <i class='bi bi-file-earmark-pdf'></i> PDF</button>  */
 											<input type="submit" name="enviar" onclick=this.form.action="print.php">
 											<button type="submit" name="editar" class="btn btn-success" onclick="excel();">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
