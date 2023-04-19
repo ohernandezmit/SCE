@@ -9,7 +9,7 @@ if (PHP_SAPI == 'cli')
 	die('This example should only be run from a Web Browser');
 include "../db/var.php";
 include "../db/conect.php";
-require 'https://srv174.hstgr.io:7443/9d74db396c492fa7/files/public_html/sys/vendor/autoload.php';
+require '../../../../../sys/php/vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -48,7 +48,7 @@ $cols=array('','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','
 'DA','DB','DC','DD','DE','DF','DG','DH','DI','DJ','DK','DL','DM','DN','DO','DP','DQ','DR','DS','DT','DU','DV','DW','DX','DY','DZ',
 'EA','EB','EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL','EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV','EW','EX','EY','EZ');
 
-//include "consulta1xx.php";
+include "consulta1xx.php";
 
 
 ?>
