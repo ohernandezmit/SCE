@@ -56,9 +56,7 @@ function excel(destino){
                 							<button type="button" name="editar" class="btn btn-primary" onclick="pdf('print.php');">
 											 <i class="bi bi-file-earmark-pdf"></i> PDF</button> 
 											
-											<!-- <input type="button" name="enviar1" id="enviar1" value="PDF" class="btn btn-primary" onclick="pdf('print.php')">
-											<input type="button" name="enviar2" id="enviar2" value="Excel" class="btn btn-success"  onclick="excel('excel.php')">							 -->
-											<button type="button" name="editar" class="btn btn-success" onclick="excel();">
+											<button type="button" name="editar" class="btn btn-success" onclick="excel('excel.php');">
 											<i class="bi bi-file-earmark-excel"></i> Excel</button>
                 						</div>
                 					</form>
