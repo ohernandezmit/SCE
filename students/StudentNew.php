@@ -21,18 +21,18 @@ include "../temp/02.php";
                                 <div class="row form-group">
                                     <div class="row espacio">
                                         <div class="col-6">
-                                            <label for="nombre">Nombre <i style="color:red; font-size: 10px; position: absolute; font-weight: bold;">*</i> :</label>
+                                            <label for="nombre">Nombre</label>
                                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre(s) del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                         <div class="col-6">
-                                            <label for="apellido">Apellidos:</label>
+                                            <label for="apellido">Apellidos</label>
                                             <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido(s) del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                     </div>
                                     
                                     <div class="row espacio">
                                         <div class="col-sm-3" style="padding-bottom: 20px;">
-                                            <p>Turno:</p>
+                                            <p>Turno</p>
                                                 <select id="select-turno" name="select-turno" class="form-control">
                                                     <?php																
                                                     
@@ -50,12 +50,12 @@ include "../temp/02.php";
                                                 </select>
                                         </div>
                                         <div class="col-sm-3" style="padding-bottom: 20px;">
-                                            <p>Nivel:</p>
+                                            <p>Nivel</p>
                                                 <select id="select-nivel" name="select-nivel" class="form-control" >
                                                 </select>
                                         </div>
                                         <div class="col-sm-3" style="padding-bottom: 20px;">
-                                            <p>Grados y Grupos:</p>
+                                            <p>Grados y Grupos</p>
                                                 <select id="select-grado" name="select-grado" class="form-control" >
                                                 </select>
                                         </div>
@@ -66,7 +66,7 @@ include "../temp/02.php";
                                     
                                     <div class="row">
                                         <div class="col-12">
-                                            <label for="curp">CURP:</label>
+                                            <label for="curp">CURP</label>
                                             <input type="text" class="form-control" name="curp" id="curp" placeholder="CURP del alumno" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();">	
                                         </div>
                                     </div>
