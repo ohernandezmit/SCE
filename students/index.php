@@ -37,26 +37,15 @@ if (empty($_SESSION["cuenta"])) {
 						<table id="datatablesSimple">
 							<thead>
 								<tr>
-									<th>Matricula</th>
-									<th>Nombre</th>
-									<th>Apellidos</th>
-									<th>Grado</th>
-									<th>Grupo</th>
-									<th>Curp</th>
-									<th>Turno</th>
+									<th class="text-center">Matricula</th>
+									<th class="text-center">Nombre</th>
+									<th class="text-center">Apellidos</th>
+									<th class="text-center">Grado</th>
+									<th class="text-center">Grupo</th>
+									<th class="text-center">Curp</th>
+									<th class="text-center">Turno</th>
 								</tr>
 							</thead>
-							<tfoot>
-								<tr>
-									<th>Matricula</th>
-									<th>Nombre</th>
-									<th>Apellidos</th>
-									<th>Grado</th>
-									<th>Grupo</th>
-									<th>Curp</th>
-									<th>Turno</th>
-								</tr>
-							</tfoot>
 							<tbody>
 								<?php
 								$sq="SELECT A.*, G.* FROM alumnos A
@@ -66,13 +55,13 @@ if (empty($_SESSION["cuenta"])) {
 								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
 								?>
 								<tr>
-									<th scope="row"><?php echo $row['matricula']; ?></th>
+									<th scope="row" class="text-center"><?php echo $row['matricula']; ?></th>
 									<td><?php echo $row['nombre']; ?></td>
 									<td><?php echo $row['apellidos']; ?></td>
-									<td><?php echo $row['grado']; ?></td>
-									<td><?php echo $row['grupos']; ?></td>
-									<td><?php echo $row['curp']; ?></td>
-									<td><?php echo $row['turno']; ?></td>
+									<td class="text-center"><?php echo $row['grado']; ?></td>
+									<td class="text-center"><?php echo $row['grupos']; ?></td>
+									<td class="text-center"><?php echo $row['curp']; ?></td>
+									<td class="text-center"><?php echo $row['turno']; ?></td>
 								</tr>
 								<?php } ?>
 							</tbody>
