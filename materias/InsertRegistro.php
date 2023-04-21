@@ -34,65 +34,81 @@
 
                 switch ($num_palabras) {
                         case 1:
-                            echo substr($materia, 0, 3);
+                            $abrev = substr($materia, 0, 3);
                             break;
                         case 2:
                             list($primera, $segunda) = explode(' ', $materia);
                              $abrev1 = substr($primera, 0, 1);
                              $abrev2 = substr($segunda, 0, 3);
 
-                                echo $abrev1 . $abrev2;
+                                $abrev = $abrev1 . $abrev2;
                             
                             break;
                         case 3:
                             list($primera, $segunda, $tercera) = explode(' ', $materia);
-                            echo $abrev1 = substr($primera, 0, 1). '<br>';
-                            echo $abrev2 = substr($segunda, 0, 1). '<br>';
-                            echo $abrev3 = substr($tercera, 0, 3). '<br>';
+                             $abrev1 = substr($primera, 0, 1). '<br>';
+                             $abrev2 = substr($segunda, 0, 1). '<br>';
+                             $abrev3 = substr($tercera, 0, 3). '<br>';
     
-                                echo $abrev1 . $abrev2 . $abrev3;
+                                $abrev = $abrev1 . $abrev2 . $abrev3;
                                 
                             break;
                         case 4:
                             list($primera, $segunda, $tercera, $cuarta) = explode(' ', $materia);
-                            echo $abrev1 = substr($primera, 0, 1). '<br>';
-                            echo $abrev2 = substr($segunda, 0, 1). '<br>';
-                            echo $abrev3 = substr($tercera, 0, 1). '<br>';
-                            echo $abrev4 = substr($cuarta, 0, 3). '<br>';
+                             $abrev1 = substr($primera, 0, 1). '<br>';
+                             $abrev2 = substr($segunda, 0, 1). '<br>';
+                             $abrev3 = substr($tercera, 0, 1). '<br>';
+                             $abrev4 = substr($cuarta, 0, 3). '<br>';
         
-                                echo $abrev1 . $abrev2 . $abrev3 . $abrev4;
+                                $abrev = $abrev1 . $abrev2 . $abrev3 . $abrev4;
                             break;
                         case 5:
                             list($primera, $segunda, $tercera, $cuarta, $quinta) = explode(' ', $materia);
-                            echo $abrev1 = substr($primera, 0, 1). '<br>';
-                            echo $abrev2 = substr($segunda, 0, 1). '<br>';
-                            echo $abrev3 = substr($tercera, 0, 1). '<br>';
-                            echo $abrev4 = substr($cuarta, 0, 1). '<br>';
-                            echo $abrev5 = substr($quinta, 0, 3). '<br>';
+                             $abrev1 = substr($primera, 0, 1). '<br>';
+                             $abrev2 = substr($segunda, 0, 1). '<br>';
+                             $abrev3 = substr($tercera, 0, 1). '<br>';
+                             $abrev4 = substr($cuarta, 0, 1). '<br>';
+                             $abrev5 = substr($quinta, 0, 3). '<br>';
             
-                                    echo $abrev1 . $abrev2 . $abrev3 . $abrev4 . $abrev5;
+                                $abrev = $abrev1 . $abrev2 . $abrev3 . $abrev4 . $abrev5;
                             break;
                     }
+                    if (empty($abrev)) 
+                    {
+                        echo "
+                	<script>
+                    	        Swal.fire({
+                        	icon: 'warning',
+                        	title: '¡Error!',
+                                text: 'Ocurrio un error con la abreviatura. Si el problema persiste contacte al administrador.',
+                        	button: 'OK',
+                    	})
+                    	.then(function() {
+                        	location.href = '$server_name/materias/';
+                    	});
+                	</script>  ";
+                    }
+                    else{
 
+            	$sql = "INSERT INTO materia (Id_nivel, Id_grado, materia, abrev, creadox, f_creacion)
+                                     VALUES ('$nivel', '$grado', '$materia', '$abrev', '$cuenta', '$fecha')";
+ 				$res=$mysqli->query($sql);
 
-            	$sql = "INSERT INTO materia (Id_nivel, Id_grado, materia, creadox, f_creacion)
-                                     VALUES ('$nivel', '$grado', '$materia', '$cuenta', '$fecha')";
- 				//$res=$mysqli->query($sql);
+            	if ($res === false) { echo "SQL Error: " . $mysqli->error; }
 
-            	//if ($res === false) { echo "SQL Error: " . $mysqli->error; }
-
-                // echo "
-                // 	<script>
-                //     	Swal.fire({
-                //         	icon: 'success',
-                //         	title: '¡Materia creada con Exito!',
-                //         	button: 'OK',
-                //     	})
-                //     	.then(function() {
-                //         	location.href = '$server_name/materias/';
-                //     	});
-                // 	</script>  ";
+                echo "
+                	<script>
+                    	Swal.fire({
+                        	icon: 'success',
+                        	title: '¡Materia creada con Exito!',
+                        	button: 'OK',
+                    	})
+                    	.then(function() {
+                        	location.href = '$server_name/materias/';
+                    	});
+                	</script>  ";
             } 
+        }
     }  else {
     	echo "<script>
               	Swal.fire({
