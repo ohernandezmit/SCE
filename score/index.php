@@ -19,7 +19,8 @@ include "../temp/02.php";
 						<table id="datatablesSimple">
 							<thead>
 									<?php
-								        $sqt="SELECT * FROM materia";
+								        $sqt="SELECT M.*, G.* FROM materia M
+											  INNER JOIN grados_grupos G ON G.Id = M.Id_grado";
 								            $rst=$mysqli->query($sqt);
 								    ?>
 								        <tr>
