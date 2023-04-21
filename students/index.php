@@ -48,7 +48,7 @@ if (empty($_SESSION["cuenta"])) {
 							</thead>
 							<tbody>
 								<?php
-								$sq=" SELECT A.*, G.*, N.* FROM alumnos A
+								$sq=" SELECT A.*, G.*, N.Id, N.nombre as nombre_nivel FROM alumnos A
 								      JOIN grados_grupos G ON A.id_grado = G.Id
 									  INNER JOIN niveles N ON N.Id = G.id_nivel ";
 								$rs=$mysqli->query($sq);
@@ -58,7 +58,7 @@ if (empty($_SESSION["cuenta"])) {
 									<th scope="row" class="text-center"><?php echo $row['matricula']; ?></th>
 									<td><?php echo $row['nombre']; ?></td>
 									<td><?php echo $row['apellidos']; ?></td>
-									<td class="text-center"><?php echo $row['nombre']; ?></td>
+									<td class="text-center"><?php echo $row['nombre_nivel']; ?></td>
 									<td class="text-center"><?php echo $row['grado']; ?></td>
 									<td class="text-center"><?php echo $row['grupos']; ?></td>
 									<td class="text-center"><?php echo $row['curp']; ?></td>
