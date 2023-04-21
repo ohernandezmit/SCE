@@ -30,7 +30,7 @@
                         });
                         </script>";
             }else{
-                echo $num_palabras = str_word_count($materia, 0);
+                $num_palabras = str_word_count($materia, 0);
 
                 switch ($num_palabras) {
                         case 1:
