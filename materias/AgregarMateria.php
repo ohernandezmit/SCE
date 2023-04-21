@@ -26,7 +26,8 @@
 								<div class="col-6">
                                     <label class="form-label" for="grado">Grade:</label>
                                     <!-- SELECT grado -->
-                                	<div id="SelectNivel"></div>
+									<input type="text" name="grado" id="grado" class='form-control' value="SelectNivel">
+                                	<!-- <div id="SelectNivel"></div> -->
                                 	<!-- END SELECT grado -->
                                 </div>
 
