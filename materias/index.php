@@ -47,7 +47,7 @@ $fecha = date('Y/m/d');
 							</thead>
 							<tbody>
 								<?php
-								$sq="SELECT a.*, b.nombre 
+								$sq="SELECT a.*, b.nombre, g.grado, g.grupos 
 									 FROM materia as a
 									 INNER JOIN niveles as b on b.Id = a.Id_nivel
 									 INNER JOIN grados_grupos as g on g.Id = a.Id_grado
