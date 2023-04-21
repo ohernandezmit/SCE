@@ -30,23 +30,26 @@
                         });
                         </script>";
             }else{
+                echo str_word_count($materia, 0);
+
+
             	$sql = "INSERT INTO materia (Id_nivel, Id_grado, materia, creadox, f_creacion)
                                      VALUES ('$nivel', '$grado', '$materia', '$cuenta', '$fecha')";
- 				$res=$mysqli->query($sql);
+ 				//$res=$mysqli->query($sql);
 
-            	if ($res === false) { echo "SQL Error: " . $mysqli->error; }
+            	//if ($res === false) { echo "SQL Error: " . $mysqli->error; }
 
-                echo "
-                	<script>
-                    	Swal.fire({
-                        	icon: 'success',
-                        	title: '¡Materia creada con Exito!',
-                        	button: 'OK',
-                    	})
-                    	.then(function() {
-                        	location.href = '$server_name/materias/';
-                    	});
-                	</script>  ";
+                // echo "
+                // 	<script>
+                //     	Swal.fire({
+                //         	icon: 'success',
+                //         	title: '¡Materia creada con Exito!',
+                //         	button: 'OK',
+                //     	})
+                //     	.then(function() {
+                //         	location.href = '$server_name/materias/';
+                //     	});
+                // 	</script>  ";
             } 
     }  else {
     	echo "<script>
