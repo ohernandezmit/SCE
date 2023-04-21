@@ -30,7 +30,49 @@
                         });
                         </script>";
             }else{
-                echo str_word_count($materia, 0);
+                echo $num_palabras = str_word_count($materia, 0);
+
+                switch ($num_palabras) {
+                        case 1:
+                            echo substr($materia, 0, 3);
+                            break;
+                        case 2:
+                            list($primera, $segunda) = explode(' ', $materia);
+                            echo $abrev1 = substr($primera, 0, 1). '<br>';
+                            echo $abrev2 = substr($segunda, 0, 3). '<br>';
+
+                                echo $abrev1 . $abrev2;
+                            
+                            break;
+                        case 3:
+                            list($primera, $segunda, $tercera) = explode(' ', $materia);
+                            echo $abrev1 = substr($primera, 0, 1). '<br>';
+                            echo $abrev2 = substr($segunda, 0, 1). '<br>';
+                            echo $abrev3 = substr($tercera, 0, 3). '<br>';
+    
+                                echo $abrev1 . $abrev2 . $abrev3;
+                                
+                            break;
+                        case 4:
+                            list($primera, $segunda, $tercera, $cuarta) = explode(' ', $materia);
+                            echo $abrev1 = substr($primera, 0, 1). '<br>';
+                            echo $abrev2 = substr($segunda, 0, 1). '<br>';
+                            echo $abrev3 = substr($tercera, 0, 1). '<br>';
+                            echo $abrev4 = substr($cuarta, 0, 3). '<br>';
+        
+                                echo $abrev1 . $abrev2 . $abrev3 . $abrev4;
+                            break;
+                        case 5:
+                            list($primera, $segunda, $tercera, $cuarta, $quinta) = explode(' ', $materia);
+                            echo $abrev1 = substr($primera, 0, 1). '<br>';
+                            echo $abrev2 = substr($segunda, 0, 1). '<br>';
+                            echo $abrev3 = substr($tercera, 0, 1). '<br>';
+                            echo $abrev4 = substr($cuarta, 0, 1). '<br>';
+                            echo $abrev5 = substr($quinta, 0, 3). '<br>';
+            
+                                    echo $abrev1 . $abrev2 . $abrev3 . $abrev4 . $abrev5;
+                            break;
+                    }
 
 
             	$sql = "INSERT INTO materia (Id_nivel, Id_grado, materia, creadox, f_creacion)
