@@ -14,7 +14,7 @@
             $grado = $_POST['grado'];
             $materia = $_POST['materia'];
 
-            $sq1="SELECT * FROM materia WHERE Id_nivel = '$nivel' and n_grado='$grado' and materia='$materia'";
+            $sq1="SELECT * FROM materia WHERE Id_nivel = '$nivel' and Id_grado='$grado' and materia='$materia'";
             $rs1=$mysqli->query($sq1);
             $row_cnt = $rs1->num_rows;
             if ($row_cnt>0){
@@ -30,7 +30,7 @@
                         });
                         </script>";
             }else{
-            	$sql = "INSERT INTO materia (Id_nivel, n_grado, materia, creadox, f_creacion)
+            	$sql = "INSERT INTO materia (Id_nivel, Id_grado, materia, creadox, f_creacion)
                                      VALUES ('$nivel', '$grado', '$materia', '$cuenta', '$fecha')";
  				$res=$mysqli->query($sql);
 
