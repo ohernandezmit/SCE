@@ -38,8 +38,8 @@
                             break;
                         case 2:
                             list($primera, $segunda) = explode(' ', $materia);
-                            echo $abrev1 = substr($primera, 0, 1). '<br>';
-                            echo $abrev2 = substr($segunda, 0, 3). '<br>';
+                             $abrev1 = substr($primera, 0, 1);
+                             $abrev2 = substr($segunda, 0, 3);
 
                                 echo $abrev1 . $abrev2;
                             
