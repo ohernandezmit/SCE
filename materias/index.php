@@ -50,6 +50,7 @@ $fecha = date('Y/m/d');
 								$sq="SELECT a.*, b.nombre 
 									 FROM materia as a
 									 INNER JOIN niveles as b on b.Id = a.Id_nivel
+									 INNER JOIN grados_grupos as g on g.Id = a.Id_grado
 									 WHERE a.activo='0'";
 								$rs=$mysqli->query($sq);
 								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
@@ -68,7 +69,7 @@ $fecha = date('Y/m/d');
 		                            </div>';
 								?>
 								<tr>
-									<th><?php echo $row['nombre']; ?></th>
+									<th><?php echo $row['grado'].'° '.$row['grupos']; ?></th>
 									<td><?php echo $row['Id_grado']; ?></td>
 									<td><?php echo $row['materia']; ?></td>
 									<td class="text-center"><?php echo $edit.'&nbsp;&nbsp;'.$delete; ?></td>
