@@ -13,9 +13,12 @@ if(isset($cuenta)){
     $apellidos = $_POST['apellidos'];
     $correo = $_POST['correo'];
     $rol = $_POST['rol'];
+    $turno = $_POST['select-turno'];
+    $nivel = $_POST['select-nivel'];
+    $grado = $_POST['select-grado'];
 
-    $sql = "INSERT INTO teachers (name, apellidos, correo, rol, estatus)
-                        VALUES ('$nombre', '$apellidos', '$correo', '$rol','1')";
+    $sql = "INSERT INTO teachers (name, apellidos, correo, rol, id_grado, id_nivel, id_turno, id_ciclo, estatus)
+                        VALUES ('$nombre', '$apellidos', '$correo', '$rol', '$grado','$nivel ', '$turno','1', '1')";
     $rst = $mysqli->query($sql);
     
     if($rst === false){
