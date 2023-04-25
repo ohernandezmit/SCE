@@ -40,7 +40,7 @@
 
 								<div class="col-6">
 									<label for="rol">Rol:</label>
-									<select class="form-select" name="name_format" id="name_format">
+									<select class="form-select" name="rol" id="rol">
 										<option value="Administrador">Administrador</option>
 										<option value="Docente">Docente</option>
 									</select>
