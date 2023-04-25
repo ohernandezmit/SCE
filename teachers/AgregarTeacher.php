@@ -31,7 +31,7 @@
 							<div class="row espacio">
 								<div class="col-6">
 									<label for="nombre">Nombre(s):</label>
-									<input type="text" class="form-control" name="nombre" id="nombre" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+									<input type="text" class="form-control" name="nombre" id="nombre" onkeyup="javascript:this.value=this.value.toUpperCase();" >
 								</div>
 								<div class="col-6">
 									<label for="apellidos">Apellidos:</label>
