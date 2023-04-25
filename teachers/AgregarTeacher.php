@@ -11,7 +11,7 @@
 	}
 
 	function validar(){
-		if (document.form_usuarios.select-turno.value == "0") {
+		if (document.form_usuarios.select_turno.value == "0") {
 			window.alert("El turno es requerido.");
 			return false
 		}
@@ -58,7 +58,7 @@
 								<div class="row espacio">
 									<div class="col-4">
 										<label for="grado">Turno:</label>
-										<select id="select-turno" name="select-turno" class="form-control">
+										<select id="select_turno" name="select_turno" class="form-control">
 											<?php																      
 												$sq="SELECT * FROM turnos WHERE activo = '0' ";
 												$rs=$mysqli->query($sq);	

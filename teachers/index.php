@@ -112,8 +112,8 @@ $(document).ready(function() {
 $(document).ready(function(){
 	// Funcion para llenado de niveles  
 		
-	$("#select-turno").on('change', function () {
-			$("#select-turno option:selected").each(function () {
+	$("#select_turno").on('change', function () {
+			$("#select_turno option:selected").each(function () {
 				var turno = $(this).val();
 				//alert(turno);
 				$.post("consulta_nivel.php", { turno: turno }, function(data) {
