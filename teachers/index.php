@@ -102,7 +102,7 @@ $fecha = date('Y/m/d');
 $(document).ready(function() {
         $('#name_format').on('change',function(){
             var selectvalor = $(this).val(); alert(selectvalor);
-            if (selectvalor == 'Individual') {
+            if (selectvalor == 'Docente') {
                 $('.masElementos').css('display','block');
             } else {
                 $('.masElementos').css('display','none');
