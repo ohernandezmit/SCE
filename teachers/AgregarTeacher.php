@@ -61,10 +61,8 @@
 										<select id="select-turno" name="select-turno" class="form-control">
 											<?php																      
 												$sq="SELECT * FROM turnos WHERE activo = '0' ";
-												$rs=$mysqli->query($sq);
-														
+												$rs=$mysqli->query($sq);	
 												echo '<option value="0">Selecciona un turno</option>';
-														
 												while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {                       
 													echo '<option value="'.$row['Id'].'">'.$row['turno'].'</option>';                            
 												}	
