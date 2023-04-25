@@ -13,7 +13,7 @@ if ($turno == 0){
 } else {
     $sq="SELECT * FROM niveles WHERE activo = '0' AND id_turno = '$turno' ";
 	$rs=$mysqli->query($sq);					
-	echo '<option value="">Selecciona un nivel</option>';					
+	echo '<option value="0">Selecciona un nivel</option>';					
 	while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {					
 	    $html .= '<option value="'.$row['Id'].'">'.$row['nombre'].'</option>';															
     }
