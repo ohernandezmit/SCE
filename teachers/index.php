@@ -109,7 +109,7 @@ $(document).ready(function() {
             }
         });
     });
-
+		
 $(document).ready(function(){
 	// Funcion para llenado de niveles  
 		
