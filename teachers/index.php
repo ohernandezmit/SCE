@@ -31,7 +31,7 @@ $fecha = date('Y/m/d');
 							<div class="col-6">
 								<p style="text-align: right">
 									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_" aria-expanded="false">
-										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Periodo</button>
+										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Docente</button>
 								</p>
 							</div>
 						</div>
