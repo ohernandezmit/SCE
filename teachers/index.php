@@ -97,18 +97,20 @@ $fecha = date('Y/m/d');
 	</div>
 </div>
 
-<script> 		
+<script> 	
+// Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
+$(document).ready(function() {
+        $('#name_format').on('change',function(){
+            var selectvalor = $(this).val(); //alert(selectvalor);
+            if (selectvalor == 'Individual') {
+                $('.masElementos').css('display','block');
+            } else {
+                $('.masElementos').css('display','none');
+            }
+        });
+    });
+
 $(document).ready(function(){
-
-	// Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
-	$('#rol').on('change',function(){
-		$("#rol option:selected").each(function(){
-			var rol = $(this).val();
-			alert("rol");
-			
-		})
-	});	
-
 	// Funcion para llenado de niveles  
 		
 	$("#select-turno").on('change', function () {
