@@ -117,19 +117,19 @@ $(document).ready(function(){
 				var turno = $(this).val();
 				//alert(turno);
 				$.post("consulta_nivel.php", { turno: turno }, function(data) {
-					$("#select-nivel").html(data);
+					$("#select_nivel").html(data);
 				});			
 			});
 	});
 
 	// Funcion para llenado de grado y grupo 
 
-	$("#select-nivel").on('change', function () {
-			$("#select-nivel option:selected").each(function () {
+	$("#select_nivel").on('change', function () {
+			$("#select_nivel option:selected").each(function () {
 				var nivel = $(this).val();
 				//alert(nivel);
 				$.post("consulta_grado.php", { nivel: nivel }, function(data) {
-					$("#select-grado").html(data);
+					$("#select_grado").html(data);
 				});			
 			});
 	});

@@ -16,6 +16,14 @@
 			return false
 		}
    	}
+
+	   function validar(){
+		if (document.form_usuarios.select_nivel.value == "0") {
+			window.alert("El nivel es requerido.");
+			return false
+		}
+   	}
+
 </script>
 <div class="modal fade" id="add_" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
@@ -72,12 +80,12 @@
 
 									<div class="col-4">
 										<label for="nivel">Nivel:</label>
-										<select id="select-nivel" name="select-nivel" class="form-control"> </select>
+										<select id="select_nivel" name="select_nivel" class="form-control"> </select>
 									</div>
 
 									<div class="col-4">
 										<label for="grado">Grados y Grupos</label>
-										<select id="select-grado" name="select-grado" class="form-control"> </select>
+										<select id="select_grado" name="select_grado" class="form-control"> </select>
 									</div>
 								</div>
 							</div>
