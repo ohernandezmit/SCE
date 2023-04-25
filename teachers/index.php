@@ -99,6 +99,17 @@ $fecha = date('Y/m/d');
 
 <script> 		
 $(document).ready(function(){
+// Mostrar u ocultar turno, nivel, grado y grupo
+	$(document).ready(function() {
+        $('#rol').on('change',function(){
+            var selectvalor = $(this).val(); //alert(selectvalor);
+            if (selectvalor == 'Docente') {
+                $('.masElementos').css('display','block');
+            } else {
+                $('.masElementos').css('display','none');
+            }
+        });
+    });
 
 // Funcion para llenado de niveles  
     
