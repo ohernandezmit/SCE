@@ -11,22 +11,24 @@
 	}
 
 	function validar(){
-		if (document.form_usuarios.select_turno.value == "0") {
-			alert("El turno es requerido.");
-			document.form_usuarios.select_turno.focus();
-			return false
-		}
+		if(document.form_usuarios.name_format.value="Docente"){
+			if (document.form_usuarios.select_turno.value == "0") {
+				alert("El turno es requerido.");
+				document.form_usuarios.select_turno.focus();
+				return false
+			}
 
-		if (document.form_usuarios.select_nivel.value == "0") {
-			alert("El nivel es requerido.");
-			document.form_usuarios.select_nivel.focus() ;
-			return false
-		}
+			if (document.form_usuarios.select_nivel.value == "0") {
+				alert("El nivel es requerido.");
+				document.form_usuarios.select_nivel.focus() ;
+				return false
+			}
 
-		if (document.form_usuarios.select_grado.value == "0") {
-			alert("El GRADO es requerido.");
-			document.form_usuarios.select_grado.focus() ;
-			return false
+			if (document.form_usuarios.select_grado.value == "0") {
+				alert("El grado es requerido.");
+				document.form_usuarios.select_grado.focus() ;
+				return false
+			}
 		}
    	}
 
