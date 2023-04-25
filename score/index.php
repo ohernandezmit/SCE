@@ -16,9 +16,10 @@ include "../temp/02.php";
 				<i class="fas fa-table me-1"></i>
 					Lista
 					<div class="card-body">
-						<div class="col-sm-3" style="padding-bottom: 20px;">
+						<div class="row espacio">
+							<div class="col-sm-3" style="padding-bottom: 20px;">
 									<p>Nivel:</p>
-										<select id="select-nivel" name="select-nivel" class="form-nivel">
+										<select id="select-nivel" name="select-nivel" class="form-control">
 											<?php																
 											
 											$sq="SELECT * FROM niveles WHERE activo = '0' ";
@@ -33,13 +34,31 @@ include "../temp/02.php";
 											}	
 											?>
 										</select>
+							</div>
+							<div class="col-sm-3" style="padding-bottom: 20px;">
+									<p>Grado y Grupo:</p>
+										<select id="select-grado" name="select-grado" class="form-control">
+											<?php																
+											
+											$sq="SELECT * FROM grados_grupos WHERE activo = '0' ";
+											$rs=$mysqli->query($sq);
+											
+											echo '<option value="0">Selecciona un grado y un grupo</option>';
+											
+											while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
+																		
+											echo '<option value="'.$row['Id'].'">'.$row['grado'].'°'.$row['grupos'].'</option>';
+																		
+											}	
+											?>
+										</select>
+							</div>
 						</div>
 						<table id="datatablesSimple">
 							<thead>
 									<?php
 								        $sqt="SELECT M.*, G.* FROM materia M
-											  INNER JOIN grados_grupos G ON G.Id = M.Id_grado
-											  WHERE ";
+											  INNER JOIN grados_grupos G ON G.Id = M.Id_grado";
 								            $rst=$mysqli->query($sqt);
 								    ?>
 								        <tr>
