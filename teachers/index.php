@@ -104,7 +104,7 @@ $(document).ready(function(){
 	$('#rol').on('change',function(){
 		$("#rol option:selected").each(function(){
 			var rol = $(this).val();
-			alert(rol);
+			alert("rol");
 			
 		})
 	});	
