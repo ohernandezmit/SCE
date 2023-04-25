@@ -9,6 +9,13 @@
         	alert("Error: La dirección de correo " + email + " es incorrecta.");
 		}
 	}
+
+	function validar(){
+		if (document.form_usuarios.nombre.value == "") {
+			window.alert("The Comments are required.");
+			return false
+		}
+   	}
 </script>
 <div class="modal fade" id="add_" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
@@ -19,7 +26,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="container-fluid">
-					<form method="POST" action="InsertRegistro.php" enctype="multipart/form-data">
+					<form name="form_usuarios" method="POST" onSubmit="return valida()" action="InsertRegistro.php" enctype="multipart/form-data">
 						<div class="row form-group">
 							<div class="row espacio">
 								<div class="col-6">
@@ -81,7 +88,7 @@
 						<div class="modal-footer">
 							<div id="cargando" class="loader" style="display: none" ></div>
 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-							<button type="submit" name="editar" class="btn btn-primary" onclick="validar(); mostrar();">Guardar</button>
+							<button type="submit" name="editar" class="btn btn-primary" onclick="mostrar();">Guardar</button>
 						</div>
 					</form>
 				</div>
