@@ -14,8 +14,7 @@ if(isset($cuenta)){
     $correo = $_POST['email'];
     $rol = $_POST['name_format'];
     $turno = $_POST['select_turno'];
-    if(empty($$_POST['select_nivel'])){ $nivel='';}else{ $nivel = $_POST['select_nivel'];} 
-    
+    $nivel = $_POST['select_nivel'];
     $grado = $_POST['select_grado'];
 
     $sql = "INSERT INTO usuarios (nombre, apellidos, correo, rol, id_grado, id_nivel, id_turno, id_ciclo, estatus)
