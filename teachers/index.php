@@ -102,7 +102,7 @@ $(document).ready(function(){
 // Mostrar u ocultar turno, nivel, grado y grupo
 	$(document).ready(function() {
         $('#rol').on('change',function(){
-            var selectvalor = $(this).val(); //alert(selectvalor);
+            var selectvalor = $(this).val(); alert(selectvalor);
             if (selectvalor == 'Docente') {
                 $('.masElementos').css('display','block');
             } else {
