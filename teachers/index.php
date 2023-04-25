@@ -67,7 +67,7 @@ $fecha = date('Y/m/d');
 		                            </div>';
 								?>
 								<tr>
-									<th scope="row"><?php echo $row['name']; ?></th>
+									<th scope="row"><?php echo $row['nombre']; ?></th>
 									<td><?php echo $row['apellidos']; ?></td>
 									<td><?php echo $row['correo']; ?></td>
 									<td class="text-center"><?php echo $row['rol']; ?></td>
@@ -137,3 +137,5 @@ $(document).ready(function(){
 
 });
  </script>
+
+ 
