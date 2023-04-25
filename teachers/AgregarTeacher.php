@@ -15,14 +15,14 @@
 			window.alert("El turno es requerido.");
 			return false
 		}
-   	}
 
-	   function validar(){
 		if (document.form_usuarios.select_nivel.value == "0") {
 			window.alert("El nivel es requerido.");
 			return false
 		}
    	}
+
+	   
 
 </script>
 <div class="modal fade" id="add_" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
