@@ -17,7 +17,7 @@ if(isset($cuenta)){
     $nivel = $_POST['select-nivel'];
     $grado = $_POST['select-grado'];
 
-    $sql = "INSERT INTO usuarios (name, apellidos, correo, rol, id_grado, id_nivel, id_turno, id_ciclo, estatus)
+    $sql = "INSERT INTO usuarios (nombre, apellidos, correo, rol, id_grado, id_nivel, id_turno, id_ciclo, estatus)
                         VALUES ('$nombre', '$apellidos', '$correo', '$rol', '$grado','$nivel ', '$turno','1', '1')";
     $rst = $mysqli->query($sql);
     
