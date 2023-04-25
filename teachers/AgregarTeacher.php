@@ -11,7 +11,7 @@
 	}
 
 	function validar(){
-		if (document.form_usuarios.elect-turno.value == "0") {
+		if (document.form_usuarios.select-turno.value == "0") {
 			window.alert("El turno es requerido.");
 			return false
 		}
