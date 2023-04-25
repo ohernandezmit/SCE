@@ -5,9 +5,7 @@ include "../db/conect.php";
 
 session_start();
 if (empty($_SESSION["cuenta"])) {
-
 	header("Location: $server_name");
-
 	exit();
 }
 
@@ -104,6 +102,7 @@ $(document).ready(function() {
             var selectvalor = $(this).val(); //alert(selectvalor);
             if (selectvalor == 'Docente') {
                 $('.masElementos').css('display','block');
+				$('.masElementos').css('tran','block');
             } else {
                 $('.masElementos').css('display','none');
             }

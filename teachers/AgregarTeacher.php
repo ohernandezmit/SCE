@@ -26,7 +26,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="container-fluid">
-					<form name="form_usuarios" method="POST" onSubmit="return valida()" action="InsertRegistro.php" enctype="multipart/form-data">
+					<form name="form_usuarios" method="POST" onSubmit="return validar()" action="InsertRegistro.php" enctype="multipart/form-data">
 						<div class="row form-group">
 							<div class="row espacio">
 								<div class="col-6">
