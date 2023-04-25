@@ -56,13 +56,13 @@ $fecha = date('Y/m/d');
 									
 									$edit = '<div class="btn-group">
 		                                <button type="button" class="btn btn-outline-success btn2" data-bs-toggle="dropdown" aria-expanded="false" >
-		                                    <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#edit_'.$row['Id'].'"></i>
+		                                    <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#edit_'.$row['id'].'"></i>
 		                                </button>
 		                            </div>';
 		                            
 									$delete = '<div class="btn-group">
 		                                <button type="button" class="btn btn-outline-danger btn2" data-bs-toggle="dropdown" aria-expanded="false" >
-		                                    <i class="bi bi-trash" data-bs-toggle="modal" data-bs-target="#delete_'.$row['Id'].'"></i>
+		                                    <i class="bi bi-trash" data-bs-toggle="modal" data-bs-target="#delete_'.$row['id'].'"></i>
 		                                </button>
 		                            </div>';
 								?>
@@ -138,4 +138,3 @@ $(document).ready(function(){
 });
  </script>
 
- 
