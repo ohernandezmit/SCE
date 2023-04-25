@@ -11,8 +11,8 @@
 	}
 
 	function validar(){
-		if (document.form_usuarios.nombre.value == "") {
-			window.alert("The Comments are required.");
+		if (document.form_usuarios.elect-turno.value == "0") {
+			window.alert("El turno es requerido.");
 			return false
 		}
    	}
@@ -31,7 +31,7 @@
 							<div class="row espacio">
 								<div class="col-6">
 									<label for="nombre">Nombre(s):</label>
-									<input type="text" class="form-control" name="nombre" id="nombre" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+									<input type="text" class="form-control" name="nombre" id="nombre" equired="required" onkeyup="javascript:this.value=this.value.toUpperCase();" >
 								</div>
 								<div class="col-6">
 									<label for="apellidos">Apellidos:</label>
