@@ -46,7 +46,7 @@
 								</div>
 							</div>
 
-							<div class="row espacio masElementos">
+							<div class="row espacio masElementos" style="display: none">
 								<div class="col-4">
 									<label for="grado">Turno:</label>
 									<select id="select-turno" name="select-turno" class="form-control">
