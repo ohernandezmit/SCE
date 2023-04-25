@@ -105,7 +105,7 @@ $(document).ready(function(){
 $("#select-turno").on('change', function () {
         $("#select-turno option:selected").each(function () {
             var turno = $(this).val();
-            alert(turno);
+            //alert(turno);
             $.post("consulta_nivel.php", { turno: turno }, function(data) {
                 $("#select-nivel").html(data);
             });			
