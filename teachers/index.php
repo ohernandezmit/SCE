@@ -23,7 +23,7 @@ $fecha = date('Y/m/d');
 			<div class="card mb-4">
 				<div class="card-header">
 					<i class="bi bi-person-workspace"></i>
-					Docentes
+					Usuarios
 
 					<div class="card-body">
 						<div class="row">
@@ -31,7 +31,7 @@ $fecha = date('Y/m/d');
 							<div class="col-6">
 								<p style="text-align: right">
 									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_" aria-expanded="false">
-										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Docente</button>
+										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Usuario</button>
 								</p>
 							</div>
 						</div>
