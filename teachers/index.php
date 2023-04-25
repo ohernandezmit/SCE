@@ -49,7 +49,7 @@ $fecha = date('Y/m/d');
 							</thead>
 							<tbody>
 								<?php
-								$sq="SELECT * FROM teachers WHERE estatus='1'";
+								$sq="SELECT * FROM usuarios WHERE estatus='1'";
 								$rs=$mysqli->query($sq);
 								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
 									if ($row['estatus']==1) { $activo = "Activo"; } else { $activo = "Inactivo"; }
