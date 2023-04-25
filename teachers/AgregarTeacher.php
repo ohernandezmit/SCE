@@ -81,7 +81,7 @@
 						<div class="modal-footer">
 							<div id="cargando" class="loader" style="display: none" ></div>
 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-							<button type="submit" name="editar" class="btn btn-primary" >Guardar</button>
+							<button type="submit" name="editar" class="btn btn-primary" onclick="validar(); mostrar();">Guardar</button>
 						</div>
 					</form>
 				</div>
