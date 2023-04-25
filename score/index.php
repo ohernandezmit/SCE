@@ -16,11 +16,30 @@ include "../temp/02.php";
 				<i class="fas fa-table me-1"></i>
 					Lista
 					<div class="card-body">
+						<div class="col-sm-3" style="padding-bottom: 20px;">
+									<p>Nivel:</p>
+										<select id="select-nivel" name="select-nivel" class="form-nivel">
+											<?php																
+											
+											$sq="SELECT * FROM niveles WHERE activo = '0' ";
+											$rs=$mysqli->query($sq);
+											
+											echo '<option value="0">Selecciona un nivel</option>';
+											
+											while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
+																		
+											echo '<option value="'.$row['Id'].'">'.$row['nombre'].'</option>';
+																		
+											}	
+											?>
+										</select>
+						</div>
 						<table id="datatablesSimple">
 							<thead>
 									<?php
 								        $sqt="SELECT M.*, G.* FROM materia M
-											  INNER JOIN grados_grupos G ON G.Id = M.Id_grado";
+											  INNER JOIN grados_grupos G ON G.Id = M.Id_grado
+											  WHERE ";
 								            $rst=$mysqli->query($sqt);
 								    ?>
 								        <tr>
