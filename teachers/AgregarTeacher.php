@@ -13,17 +13,19 @@
 	function validar(){
 		if (document.form_usuarios.select_turno.value == "0") {
 			alert("El turno es requerido.");
-			document.form_usuarios.select_turno.focus() ;
+			document.form_usuarios.select_turno.focus();
 			return false
 		}
 
 		if (document.form_usuarios.select_nivel.value == "0") {
-			window.alert("El nivel es requerido.");
+			alert("El nivel es requerido.");
+			document.form_usuarios.select_nivel.focus() ;
 			return false
 		}
 
 		if (document.form_usuarios.select_grado.value == "0") {
-			window.alert("El GRADO es requerido.");
+			alert("El GRADO es requerido.");
+			document.form_usuarios.select_grado.focus() ;
 			return false
 		}
    	}
