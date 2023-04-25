@@ -100,8 +100,8 @@ $fecha = date('Y/m/d');
 <script> 	
 // Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
 $(document).ready(function() {
-        $('#rol').on('change',function(){
-            var selectvalor = $(this).val(); alert(selectvalor);
+        $('#name_format').on('change',function(){
+            var selectvalor = $(this).val(); //alert(selectvalor);
             if (selectvalor == 'Docente') {
                 $('.masElementos').css('display','block');
             } else {
