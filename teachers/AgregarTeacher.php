@@ -45,6 +45,35 @@
 									</select>
 								</div>
 							</div>
+
+							<div class="row espacio">
+								<div class="col-4">
+									<label for="grado">Turno:</label>
+									<select id="select-turno" name="select-turno" class="form-control">
+                                        <?php																      
+                                            $sq="SELECT * FROM turnos WHERE activo = '0' ";
+                                            $rs=$mysqli->query($sq);
+                                                    
+                                            echo '<option value="0">Selecciona un turno</option>';
+                                                    
+                                            while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {                       
+                                                echo '<option value="'.$row['Id'].'">'.$row['turno'].'</option>';                            
+                                            }	
+                                        ?>
+                                    </select>
+								</div>
+
+								<div class="col-4">
+									<label for="nivel">Nivel:</label>
+									<select id="select-nivel" name="select-nivel" class="form-control"> </select>
+								</div>
+
+								<div class="col-4">
+									<label for="grado">Grados y Grupos</label>
+									<select id="select-grado" name="select-grado" class="form-control"> </select>
+								</div>
+							</div>
+
 						</div>
 						<div class="modal-footer">
 							<div id="cargando" class="loader" style="display: none" ></div>
