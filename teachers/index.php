@@ -103,10 +103,10 @@ $(document).ready(function(){
 // Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
 	$('#rol').on('change',function(){
             var selectvalor = $(this).val(); alert(selectvalor);
-            if (selectvalor == 'Administrador') {
-                $('.masElementos').css('display','none');
-            } else {
+            if (selectvalor == 'Docente') {
                 $('.masElementos').css('display','block');
+            } else {
+                $('.masElementos').css('display','none');
             }
         });	
 
