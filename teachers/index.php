@@ -100,39 +100,38 @@ $fecha = date('Y/m/d');
 <script> 		
 $(document).ready(function(){
 
-// Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
+	// Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
 	$('#rol').on('change',function(){
-            var selectvalor = $(this).val(); alert(selectvalor);
-            if (selectvalor == 'Docente') {
-                $('.masElementos').css('display','block');
-            } else {
-                $('.masElementos').css('display','none');
-            }
-        });	
+		$("#rol option:selected").each(function(){
+			var rol = $(this).val();
+			alert(rol);
+			
+		})
+	});	
 
-// Funcion para llenado de niveles  
-    
-$("#select-turno").on('change', function () {
-        $("#select-turno option:selected").each(function () {
-            var turno = $(this).val();
-            //alert(turno);
-            $.post("consulta_nivel.php", { turno: turno }, function(data) {
-                $("#select-nivel").html(data);
-            });			
-        });
- });
+	// Funcion para llenado de niveles  
+		
+	$("#select-turno").on('change', function () {
+			$("#select-turno option:selected").each(function () {
+				var turno = $(this).val();
+				//alert(turno);
+				$.post("consulta_nivel.php", { turno: turno }, function(data) {
+					$("#select-nivel").html(data);
+				});			
+			});
+	});
 
- // Funcion para llenado de grado y grupo 
+	// Funcion para llenado de grado y grupo 
 
- $("#select-nivel").on('change', function () {
-        $("#select-nivel option:selected").each(function () {
-            var nivel = $(this).val();
-            //alert(nivel);
-            $.post("consulta_grado.php", { nivel: nivel }, function(data) {
-                $("#select-grado").html(data);
-            });			
-        });
- });
+	$("#select-nivel").on('change', function () {
+			$("#select-nivel option:selected").each(function () {
+				var nivel = $(this).val();
+				//alert(nivel);
+				$.post("consulta_grado.php", { nivel: nivel }, function(data) {
+					$("#select-grado").html(data);
+				});			
+			});
+	});
 
 });
  </script>
