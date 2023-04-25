@@ -62,6 +62,16 @@
                                         ?>
                                     </select>
 								</div>
+
+								<div class="col-4">
+									<label for="nivel">Nivel:</label>
+									<select id="select-nivel" name="select-nivel" class="form-control"> </select>
+								</div>
+
+								<div class="col-4">
+									<label for="grado">Grados y Grupos</label>
+									<select id="select-grado" name="select-grado" class="form-control"> </select>
+								</div>
 							</div>
 
 						</div>
@@ -76,3 +86,33 @@
 		</div>
 	</div>
 </div>
+
+<script> 		
+$(document).ready(function(){
+
+// Funcion para llenado de niveles  
+    
+$("#select-turno").on('change', function () {
+        $("#select-turno option:selected").each(function () {
+            var turno = $(this).val();
+            //alert(turno);
+            $.post("consulta_nivel.php", { turno: turno }, function(data) {
+                $("#select-nivel").html(data);
+            });			
+        });
+ });
+
+ // Funcion para llenado de grado y grupo 
+
+ $("#select-nivel").on('change', function () {
+        $("#select-nivel option:selected").each(function () {
+            var nivel = $(this).val();
+            //alert(nivel);
+            $.post("consulta_grado.php", { nivel: nivel }, function(data) {
+                $("#select-grado").html(data);
+            });			
+        });
+ });
+
+});
+ </script>
