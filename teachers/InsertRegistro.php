@@ -12,7 +12,7 @@ if(isset($cuenta)){
 	$nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
     $correo = $_POST['email'];
-    $rol = $_POST['rol'];
+    $rol = $_POST['name_format'];
     $turno = $_POST['select-turno'];
     $nivel = $_POST['select-nivel'];
     $grado = $_POST['select-grado'];
