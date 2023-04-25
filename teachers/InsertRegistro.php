@@ -11,7 +11,7 @@ $cuenta=$_SESSION["cuenta"];
 if(isset($cuenta)){
 	$nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
-    $correo = $_POST['correo'];
+    $correo = $_POST['email'];
     $rol = $_POST['rol'];
     $turno = $_POST['select-turno'];
     $nivel = $_POST['select-nivel'];
