@@ -11,7 +11,7 @@
 	}
 
 	function validar(){
-		if(document.form_usuarios.name_format.value="Docente"){
+		if(document.form_usuarios.name_format.value=="Docente"){
 			if (document.form_usuarios.select_turno.value == "0") {
 				alert("El turno es requerido.");
 				document.form_usuarios.select_turno.focus();
