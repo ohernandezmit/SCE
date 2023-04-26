@@ -59,6 +59,18 @@
 
 							<div class="row espacio">
 								<div class="col-6">
+									<label for="cuenta">Cuenta:</label>
+									<input type="email" class="form-control" name="cuenta" id="cuenta" required="required">
+								</div>
+
+								<div class="col-6">
+									<label for="password">Contraseña:</label>
+									<input type="text" class="form-control" name="password" id="password" required="required">
+								</div>
+							</div>
+
+							<div class="row espacio">
+								<div class="col-6">
 									<label for="correo">Correo:</label>
 									<input type="email" class="form-control" name="email" id="email" required="required" onchange="validacorreo();">
 								</div>
