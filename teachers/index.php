@@ -97,7 +97,7 @@ $fecha = date('Y/m/d');
 
 <script> 	
 // Funcion para crear cuenta de usuarios
-function cuenta()
+function crear_cuenta()
     {
         var nombre = document.getElementById("nombre").value;
         var apellidos = document.getElementById("apellidos").value;
