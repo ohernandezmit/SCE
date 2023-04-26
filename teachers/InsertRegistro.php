@@ -14,9 +14,9 @@ if(isset($cuenta)){
     $correo = $_POST['email'];
     $rol = $_POST['name_format'];
     $turno = $_POST['select_turno'];
-    $nivel = $_POST['select_nivel'];
-    $grado = $_POST['select_grado'];
-
+    if(empty($_POST['select_nivel'])){ $nivel = 0; } else { $nivel = $_POST['select_nivel']; }
+    if(empty($_POST['select_grado'])){ $nigradovel = 0; } else { $grado = $_POST['select_grado']; }
+    
     $sql = "INSERT INTO usuarios (nombre, apellidos, correo, rol, id_grado, id_nivel, id_turno, id_ciclo, estatus)
                         VALUES ('$nombre', '$apellidos', '$correo', '$rol', '$grado','$nivel ', '$turno','1', '1')";
     $rst = $mysqli->query($sql);
