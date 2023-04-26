@@ -49,11 +49,11 @@
 							<div class="row espacio">
 								<div class="col-6">
 									<label for="nombre">Nombre(s):</label>
-									<input type="text" class="form-control" name="nombre" id="nombre" equired="required" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+									<input type="text" class="form-control" name="nombre" id="nombre" equired="required" onkeyup="javascript:this.value=this.value.toUpperCase(); cuenta();" >
 								</div>
 								<div class="col-6">
 									<label for="apellidos">Apellidos:</label>
-									<input type="text" class="form-control" name="apellidos" id="apellidos" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+									<input type="text" class="form-control" name="apellidos" id="apellidos" required="required" onkeyup="javascript:this.value=this.value.toUpperCase(); cuenta();" >
 								</div>
 							</div>
 
