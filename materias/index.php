@@ -88,6 +88,7 @@ $fecha = date('Y/m/d');
 	</div>
 </div>
 <?php  include "../temp/03.php"; ?>
+</div>
 <script type="text/javascript">
 			$(document).ready(function(){
 				recargarNivel();
