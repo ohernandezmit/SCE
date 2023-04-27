@@ -32,11 +32,9 @@ $fecha = date('Y/m/d');
 								<p style="text-align: right">
 									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_" aria-expanded="false">
 										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Materia</button>
-
 								</p>
 							</div>
 						</div>
-
 						<table id="datatablesSimple">
 							<thead>
 								<tr>
@@ -81,13 +79,6 @@ $fecha = date('Y/m/d');
 								<?php 
 							} ?>
 							</tbody>
-							<tfoot>
-								<tr>
-									<th class="text-center">Nivel</th>
-									<th class="text-center">Grado</th>
-									<th class="text-center">Materia</th>
-								</tr>
-							</tfoot>
 						</table>
 					</div>
 				</div>
