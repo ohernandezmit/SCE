@@ -29,7 +29,8 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
             # code...
 			$_SESSION["cuenta"]= $row['cuenta'];
             $_SESSION["nombre"]= $row['nombre'];
-            $_SESSION["turno"]=$row['turno'];
+            $_SESSION["apellidos"]= $row['apellidos'];
+            $_SESSION["turno"]=$row['id_turno'];
 
             header("Location: $server_name");
         }else{

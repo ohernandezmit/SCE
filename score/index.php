@@ -15,7 +15,7 @@ include "../temp/02.php";
 	 <div class="card mb-4">
 			<div class="card-header">
 				<i class="fas fa-table me-1"></i>
-					Filtro
+					SELECCIONA UN GRUPO
 					<div class="card-body">
 						<div class="row espacio">
 							<div class="col-sm-3" style="padding-bottom: 20px;">
