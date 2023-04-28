@@ -18,7 +18,7 @@ $fecha = date('Y/m/d');
 ?>
 
 <div id="layoutSidenav">
-	<?php include "../temp/menu.php"; ?>
+	<?php //include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
 		<main>
 			<div class="card mb-4">
