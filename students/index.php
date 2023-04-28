@@ -70,7 +70,7 @@ if (empty($_SESSION["cuenta"])) {
 				</div>
 			</div>
 		</main>
-<?php include('AgregarAlumno.php'); //include "../temp/03.php"; ?>
+<?php include('AgregarAlumno.php'); include "../temp/03.php"; ?>
 	</div>
 </div>
 <script type="text/javascript">
