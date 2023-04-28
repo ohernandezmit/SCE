@@ -83,8 +83,8 @@ $fecha = date('Y/m/d');
 					</div>
 				</div>
 			</div>
+			<br><br><br>
 		</main>
-		<br><br><br>
 		<?php include('AgregarMateria.php'); include "../temp/03.php"; ?>
 	</div>
 </div>
