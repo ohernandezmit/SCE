@@ -30,6 +30,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
 		$('#datatablesSimple').DataTable({
+			scrollY: '200px',
+        	scrollCollapse: true,
             "language": {
 				"url": "//cdn.datatables.net/plug-ins/1.13.1/i18n/es-ES.json"
                     }
