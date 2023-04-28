@@ -37,7 +37,7 @@ function crear_cuenta()
         var nombre = document.getElementById("nombre").value;
         var apellidos = document.getElementById("apellidos").value;
         
-        document.getElementById("cuenta").value = nombre + ' ' +  apellidos;
+        document.getElementById("account").value = nombre + ' ' +  apellidos;
         
     };
 	   
@@ -67,8 +67,8 @@ function crear_cuenta()
 
 							<div class="row espacio">
 								<div class="col-6">
-									<label for="cuenta">Cuenta:</label>
-									<input type="email" class="form-control" name="cuenta" id="cuenta" required="required">
+									<label for="account">Cuenta:</label>
+									<input type="email" class="form-control" name="account" id="account" required="required">
 								</div>
 
 								<div class="col-6">
