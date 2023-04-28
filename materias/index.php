@@ -22,7 +22,7 @@ $fecha = date('Y/m/d');
 	<div id="layoutSidenav_content">
 		<main>
 			<div class="card mb-4">
-				<div class="card-header">
+				<!-- <div class="card-header"> -->
 					<i class="bi bi-book"></i>
 					Materias
 					<!-- <div class="card-body"> -->
@@ -81,7 +81,7 @@ $fecha = date('Y/m/d');
 							</tbody>
 						</table>
 					<!-- </div> -->
-				</div>
+				<!-- </div> -->
 			</div>
 			<br><br><br>
 		</main>
