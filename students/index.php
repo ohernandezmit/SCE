@@ -19,7 +19,6 @@ if (empty($_SESSION["cuenta"])) {
 <div id="layoutSidenav">
   <?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
-	 <!-- <main> -->
 		<div class="card mb-4">
 			<div class="card-header">
 				<i class="fas fa-table me-1"></i>
@@ -69,7 +68,6 @@ if (empty($_SESSION["cuenta"])) {
 					</div>
 				</div>
 			</div>
-		<!-- </main> -->
 <?php include('AgregarAlumno.php'); include "../temp/03.php"; ?>
 	</div>
 </div>
