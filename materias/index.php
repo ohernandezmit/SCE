@@ -56,6 +56,12 @@ $fecha = date('Y/m/d');
 								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
 									if ($row['Id_maestro']==0) { $nombre_maestro = "Sin docente asignado"; } else { $nombre_maestro = $row['nombre_maestro'].' '.$row['apellidos']; }
 									
+									$add = '<div class="btn-group">
+		                                <button type="button" class="btn btn-outline-success btn2" data-bs-toggle="dropdown" aria-expanded="false" >
+										<i class="bi bi-person-add" data-bs-toggle="modal" data-bs-target="#edit_'.$row['Id'].'"></i>
+		                                </button>
+		                            </div>';
+
 									$edit = '<div class="btn-group">
 		                                <button type="button" class="btn btn-outline-success btn2" data-bs-toggle="dropdown" aria-expanded="false" >
 		                                    <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#edit_'.$row['Id'].'"></i>
@@ -73,7 +79,7 @@ $fecha = date('Y/m/d');
 									<td><?php echo $row['grado'].'° '.$row['grupos']; ?></td>
 									<td><?php echo $row['materia']; ?></td>
 									<td><?php echo $nombre_maestro; ?></td>
-									<td class="text-center"><?php echo $edit.'&nbsp;&nbsp;'.$delete; ?></td>
+									<td class="text-center"><?php echo $add.'&nbsp;&nbsp;'.$edit.'&nbsp;&nbsp;'.$delete; ?></td>
 									 <?php include "EditarMateria.php"; include "DeleteModal.php";  ?>
 								</tr>
 								<?php 
@@ -91,14 +97,7 @@ $fecha = date('Y/m/d');
 				$('#nivel').change(function(){
 					recargarNivel();
 				});
-
-				$('#datatablesSimple').DataTable({
-						scrollY: '200px',
-						scrollCollapse: true,
-						paging: true,
-					});
 				
-
 			})
 
 			function recargarNivel(){
