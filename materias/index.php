@@ -96,6 +96,12 @@ $fecha = date('Y/m/d');
 				$('#nivel').change(function(){
 					recargarNivel();
 				});
+
+				$('#datatablesSimple').DataTable({
+						scrollY: '200px',
+						scrollCollapse: true,
+						paging: false,
+					});
 				
 
 			})
