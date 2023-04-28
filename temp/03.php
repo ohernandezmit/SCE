@@ -1,4 +1,4 @@
-<!-- <footer class="py-4 bg-light mt-auto">
+<footer class="py-4 bg-light mt-auto">
 	<div class="container-fluid px-4">
 		<div class="d-flex align-items-center justify-content-between small">
 			<div class="text-muted">Copyright &copy; Technology MIT 2023</div>
@@ -9,7 +9,7 @@
 			</div>
 		</div>
 	</div>
-</footer> -->
+</footer> 
 <!-- Vendor JS Files -->
 <script src="<?php echo $server_name; ?>lib/bootstrap/js/bootstrap.bundle.min.js"> </script>
 <script src="<?php echo $server_name; ?>lib/js/jquery.dataTables.min.js"> </script>

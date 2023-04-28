@@ -84,13 +84,9 @@ $fecha = date('Y/m/d');
 				</div>
 			</div>
 		</main>
-		<?php include('AgregarMateria.php'); ?>	
+		<?php include('AgregarMateria.php'); include "../temp/03.php"; ?>
 	</div>
 </div>
-<br><br><br>
-
-</div>
-<?php  include "../temp/03.php"; ?>
 <script type="text/javascript">
 			$(document).ready(function(){
 				recargarNivel();
