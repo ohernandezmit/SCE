@@ -20,7 +20,7 @@ $fecha = date('Y/m/d');
 <div id="layoutSidenav">
 	<?php include "../temp/menu.php"; ?>
 	<div id="layoutSidenav_content">
-		<main>
+		<!-- <main> -->
 			<div class="card mb-4">
 				<!-- <div class="card-header"> -->
 					<i class="bi bi-book"></i>
@@ -84,7 +84,7 @@ $fecha = date('Y/m/d');
 				<!-- </div> -->
 			</div>
 			<br><br><br>
-		</main>
+		<!-- </main> -->
 		<?php include('AgregarMateria.php'); include "../temp/03.php"; ?>
 	</div>
 </div>
