@@ -83,11 +83,10 @@ $fecha = date('Y/m/d');
 					</div>
 				</div>
 			</div>
+			<br><br><br>
 		</main>
-		<?php include('AgregarMateria.php'); ?>	
+		<?php include('AgregarMateria.php'); include "../temp/03.php"; ?>
 	</div>
-</div>
-<?php  include "../temp/03.php"; ?>
 </div>
 <script type="text/javascript">
 			$(document).ready(function(){
@@ -96,6 +95,12 @@ $fecha = date('Y/m/d');
 				$('#nivel').change(function(){
 					recargarNivel();
 				});
+
+				$('#datatablesSimple').DataTable({
+						scrollY: '200px',
+						scrollCollapse: true,
+						paging: true,
+					});
 				
 
 			})

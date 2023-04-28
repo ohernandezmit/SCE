@@ -9,7 +9,7 @@
 			</div>
 		</div>
 	</div>
-</footer>
+</footer> 
 <!-- Vendor JS Files -->
 <script src="<?php echo $server_name; ?>lib/bootstrap/js/bootstrap.bundle.min.js"> </script>
 <script src="<?php echo $server_name; ?>lib/js/jquery.dataTables.min.js"> </script>
