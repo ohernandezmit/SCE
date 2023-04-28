@@ -54,7 +54,7 @@ $fecha = date('Y/m/d');
 									 WHERE a.activo='0'";
 								$rs=$mysqli->query($sq);
 								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
-									if ($row['Id_maestro']==0) { $nombre_maestro = "Sin docente asignado"; } else { $nombre_maestro = $row['nombre_maestro'].' '.$row['apellidos']; }
+									if ($row['Id_maestro']==0) { $nombre_maestro = "Sin docente asignado"; $color = 'style="background-color: red;"';  } else { $nombre_maestro = $row['nombre_maestro'].' '.$row['apellidos']; $color = 'style="background-color: green;"'; }
 									
 									$add = '<div class="btn-group">
 		                                <button type="button" class="btn btn-outline-primary btn2" data-bs-toggle="dropdown" aria-expanded="false" title="Asignar Docente" >
@@ -78,7 +78,7 @@ $fecha = date('Y/m/d');
 									<th class="text-center"><?php echo $row['nombre']; ?></th>
 									<td class="text-center"><?php echo $row['grado'].'° '.$row['grupos']; ?></td>
 									<td class="text-center"><?php echo $row['materia']; ?></td>
-									<td class="text-center" style="background-color: red;"><?php echo $nombre_maestro; ?></td>
+									<td class="text-center" <?php echo $color ?>><?php echo $nombre_maestro; ?></td>
 									<td class="text-center"><?php echo $add.'&nbsp;&nbsp;'.$edit.'&nbsp;&nbsp;'.$delete; ?></td>
 									 <?php include "EditarMateria.php"; include "DeleteModal.php";  ?>
 								</tr>
