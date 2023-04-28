@@ -57,7 +57,7 @@ $fecha = date('Y/m/d');
 									if ($row['Id_maestro']==0) { $nombre_maestro = "Sin docente asignado"; } else { $nombre_maestro = $row['nombre_maestro'].' '.$row['apellidos']; }
 									
 									$add = '<div class="btn-group">
-		                                <button type="button" class="btn btn-outline-success btn2" data-bs-toggle="dropdown" aria-expanded="false" >
+		                                <button type="button" class="btn btn-outline-primary btn2" data-bs-toggle="dropdown" aria-expanded="false" >
 										<i class="bi bi-person-add" data-bs-toggle="modal" data-bs-target="#edit_'.$row['Id'].'"></i>
 		                                </button>
 		                            </div>';
@@ -75,10 +75,10 @@ $fecha = date('Y/m/d');
 		                            </div>';
 								?>
 								<tr>
-									<th><?php echo $row['nombre']; ?></th>
-									<td><?php echo $row['grado'].'° '.$row['grupos']; ?></td>
-									<td><?php echo $row['materia']; ?></td>
-									<td><?php echo $nombre_maestro; ?></td>
+									<th class="text-center"><?php echo $row['nombre']; ?></th>
+									<td class="text-center"><?php echo $row['grado'].'° '.$row['grupos']; ?></td>
+									<td class="text-center"><?php echo $row['materia']; ?></td>
+									<td class="text-center"><?php echo $nombre_maestro; ?></td>
 									<td class="text-center"><?php echo $add.'&nbsp;&nbsp;'.$edit.'&nbsp;&nbsp;'.$delete; ?></td>
 									 <?php include "EditarMateria.php"; include "DeleteModal.php";  ?>
 								</tr>
