@@ -78,7 +78,7 @@ $fecha = date('Y/m/d');
 									<th class="text-center"><?php echo $row['nombre']; ?></th>
 									<td class="text-center"><?php echo $row['grado'].'° '.$row['grupos']; ?></td>
 									<td class="text-center"><?php echo $row['materia']; ?></td>
-									<td class="text-center"><?php echo $nombre_maestro; ?></td>
+									<td class="text-center" style="background-color: red;"><?php echo $nombre_maestro; ?></td>
 									<td class="text-center"><?php echo $add.'&nbsp;&nbsp;'.$edit.'&nbsp;&nbsp;'.$delete; ?></td>
 									 <?php include "EditarMateria.php"; include "DeleteModal.php";  ?>
 								</tr>
