@@ -41,6 +41,7 @@ $fecha = date('Y/m/d');
 									<th class="text-center">Grado</th>
 									<th class="text-center">Materia</th>
 									<th class="text-center">Docente</th>
+									<th class="text-center">Opciones</th>
 								</tr>
 							</thead>
 							<tbody>
