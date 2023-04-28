@@ -54,7 +54,7 @@ $fecha = date('Y/m/d');
 									 WHERE a.activo='0'";
 								$rs=$mysqli->query($sq);
 								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
-									if ($row['Id_maestro']==36) { $nombre_maestro = "Sin docente asignado"; $color = 'style = "background-color: red;" ';  } else { $nombre_maestro = $row['nombre_maestro'].' '.$row['apellidos']; $color = 'style = "background-color: green;" '; }
+									if ($row['Id_maestro']==36) { $nombre_maestro = "Sin docente asignado"; $color = 'style = "background-color: rgb(203, 67, 53);" ';  } else { $nombre_maestro = $row['nombre_maestro'].' '.$row['apellidos']; $color = 'style = "background-color: green;" '; }
 									
 									$add = '<div class="btn-group">
 		                                <button type="button" class="btn btn-outline-primary btn2" data-bs-toggle="dropdown" aria-expanded="false" title="Asignar Docente" >
