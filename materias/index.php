@@ -57,19 +57,19 @@ $fecha = date('Y/m/d');
 									if ($row['Id_maestro']==0) { $nombre_maestro = "Sin docente asignado"; } else { $nombre_maestro = $row['nombre_maestro'].' '.$row['apellidos']; }
 									
 									$add = '<div class="btn-group">
-		                                <button type="button" class="btn btn-outline-primary btn2" data-bs-toggle="dropdown" aria-expanded="false" >
+		                                <button type="button" class="btn btn-outline-primary btn2" data-bs-toggle="dropdown" aria-expanded="false" alt="Asignar Docente" >
 										<i class="bi bi-person-add" data-bs-toggle="modal" data-bs-target="#edit_'.$row['Id'].'"></i>
 		                                </button>
 		                            </div>';
 
 									$edit = '<div class="btn-group">
-		                                <button type="button" class="btn btn-outline-success btn2" data-bs-toggle="dropdown" aria-expanded="false" >
+		                                <button type="button" class="btn btn-outline-success btn2" data-bs-toggle="dropdown" aria-expanded="false" alt="Editar Materia" >
 		                                    <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#edit_'.$row['Id'].'"></i>
 		                                </button>
 		                            </div>';
 		                            
 									$delete = '<div class="btn-group">
-		                                <button type="button" class="btn btn-outline-danger btn2" data-bs-toggle="dropdown" aria-expanded="false" >
+		                                <button type="button" class="btn btn-outline-danger btn2" data-bs-toggle="dropdown" aria-expanded="false" alt="Eliminar Materia" >
 		                                    <i class="bi bi-trash" data-bs-toggle="modal" data-bs-target="#delete_'.$row['Id'].'"></i>
 		                                </button>
 		                            </div>';
