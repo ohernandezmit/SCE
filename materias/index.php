@@ -100,7 +100,7 @@ $fecha = date('Y/m/d');
 				$('#datatablesSimple').DataTable({
 						scrollY: '200px',
 						scrollCollapse: true,
-						paging: false,
+						paging: true,
 					});
 				
 
