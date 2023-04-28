@@ -31,7 +31,15 @@
 			}
 		}
    	}
-
+// Funcion para crear cuenta de usuarios
+function crear_cuenta()
+    {
+        var nombre = document.getElementById("nombre").value;
+        var apellidos = document.getElementById("apellidos").value;
+        
+        document.getElementById("cuenta").value = nombre + ' ' +  apellidos;
+        
+    };
 	   
 
 </script>

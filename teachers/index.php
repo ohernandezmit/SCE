@@ -96,15 +96,6 @@ $fecha = date('Y/m/d');
 </div>
 
 <script> 	
-// Funcion para crear cuenta de usuarios
-function crear_cuenta()
-    {
-        var nombre = document.getElementById("nombre").value;
-        var apellidos = document.getElementById("apellidos").value;
-        
-        document.getElementById("cuenta").value = nombre + ' ' +  apellidos;
-        
-    };
 
 // Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
 $(document).ready(function() {
