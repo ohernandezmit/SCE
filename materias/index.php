@@ -97,6 +97,10 @@ $fecha = date('Y/m/d');
 				$('#nivel').change(function(){
 					recargarNivel();
 				});
+
+				var niveltest= $('#nivel').val();
+
+				alert (niveltest);
 				
 			})
 
