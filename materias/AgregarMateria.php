@@ -53,3 +53,17 @@
 		</div>
 	</div>
 </div>
+<script>
+	$(document).ready(function(){
+				// recargarNivel();
+				
+				// $('#nivel').change(function(){
+				// 	recargarNivel();
+				// });
+
+				var niveltest= $('#nivel').val();
+
+				alert (niveltest);
+				
+			})
+	</script>
