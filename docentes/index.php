@@ -71,7 +71,7 @@ $fecha = date('Y/m/d');
         "serverSide": true,
         "ajax": "fetchData.php",
         "columnDefs": [
-            { "orderable": false, "targets": 10 }
+            { "orderable": false, "targets": 5 }
         ]
     });
 
