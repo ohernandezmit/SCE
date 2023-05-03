@@ -25,7 +25,7 @@ $columns = array(
 	array( 'db' => 'correo', 'dt' => 2 ),
 	array( 'db' => 'rol', 'dt' => 3 ),
 	array( 
-        'db'        => 'Estatus', 
+        'db'        => 'estatus', 
         'dt'        => 4, 
         'formatter' => function( $d, $row ) { 
             return ($d == 'A')?'Active':'Inactive'; 
