@@ -23,6 +23,7 @@
 										 ?>
                                     </select>
 								</div>
+								<input id="nivel">
 								<div class="col-6">
                                     <label class="form-label" for="grado">Grade:</label>
                                     <!-- SELECT grado -->
