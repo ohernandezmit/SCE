@@ -23,6 +23,41 @@ $fecha = date('Y/m/d');
                 <div class="card-header"> 
                     <i class="bi bi-person-workspace"></i>
 					Usuarios
+
+                    <div class="card-body">
+                        <div class="row">
+							<div class="col-6"></div>
+							<div class="col-6">
+								<p style="text-align: right">
+									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_" aria-expanded="false">
+										<i class="bi bi-file-earmark-plus"></i>&nbsp;Agregar Usuario</button>
+								</p>
+							</div>
+						</div>
+                    </div>
+
+                    <table id="dataList" class="display compact" style="width:100%; font-size 12px;">
+                        <thead>
+                            <tr>
+                                <th>Nombre(s)</th>
+								<th>Apellidos</th>
+								<th>Correo</th>
+								<th>Rol</th>
+								<th>Estatus</th>
+								<th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Nombre(s)</th>
+								<th>Apellidos</th>
+								<th>Correo</th>
+								<th>Rol</th>
+								<th>Estatus</th>
+								<th>Opciones</th>
+                            </tr>    
+                        </tfoot>
+                    </table>
                 </div>
             </div>
         </main>
