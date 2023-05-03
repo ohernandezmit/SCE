@@ -27,7 +27,7 @@
                                     <label class="form-label" for="grado">Grade:</label>
                                     <!-- SELECT grado -->
 									
-                                	 <div id="SelectGrado"></div> 
+                                	 <div id="SelectNivel"></div> 
                                 	<!-- END SELECT grado -->
                                 </div>
 
