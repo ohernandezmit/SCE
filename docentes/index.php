@@ -64,5 +64,20 @@ $fecha = date('Y/m/d');
     </div>
 </div>
 
+<script>
+	// Initialize DataTables API object and configure table
+var table = $('#dataList').DataTable({
+    "processing": true,
+    "serverSide": true,
+    "ajax": "fetchData.php",
+    "columnDefs": [
+        { "orderable": false, "targets": 10 }
+    ]
+});
 
+$(document).ready(function(){
+    // Draw the table
+    table.draw();
+});
+</script>
 <?php include "../temp/03.php"; ?>
