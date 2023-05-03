@@ -14,7 +14,7 @@
 								<div class="col-6">
 									<label class="form-label" for="nivel">Nivel:</label>
 									<select class='form-control' name="nivel" id="nivel" style="text-align: left" required="required">
-										<option selected disabled value=""> - Seleccione - </option>
+										<option selected disabled value="0"> - Seleccione - </option>
 										<?php $queryN = "SELECT DISTINCT nombre, Id FROM niveles";
 											  $rstN = $mysqli->query($queryN);
 											  while($rowN = $rstN->fetch_array(MYSQLI_ASSOC)) {
