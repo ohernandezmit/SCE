@@ -61,6 +61,7 @@ $fecha = date('Y/m/d');
                 </div>
             </div>
         </main>
+        <?php include "../temp/03.php"; ?>
     </div>
 </div>
 
@@ -81,4 +82,3 @@ $fecha = date('Y/m/d');
     });
 </script>
 
-<?php include "../temp/03.php"; ?>
