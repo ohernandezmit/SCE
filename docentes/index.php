@@ -34,7 +34,7 @@ $fecha = date('Y/m/d');
 							</div>
 						</div>
 
-						<table id="tableDocente">
+						<table id="datatablesSimple">
 							<thead>
 								<tr>
 									<th class="text-center">Nombre(s)</th>
@@ -67,7 +67,7 @@ $fecha = date('Y/m/d');
 
 <script> 	
 	// Initialize DataTables API object and configure table
-    var table = $('#tableDocente').DataTable({
+    var table = $('#datatablesSimple').DataTable({
         "processing": true,
         "serverSide": true,
         "ajax": "fetchData.php",
