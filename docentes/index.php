@@ -71,7 +71,7 @@ $fecha = date('Y/m/d');
 									<td class="text-center"><?php echo $row['rol']; ?></td>
 									<td class="text-center"><?php echo $activo; ?></td>
 									<td class="text-center"><?php echo $edit.'&nbsp;&nbsp;'.$delete; ?></td>
-									<?php include "EditModal.php"; include "DeleteModal.php"; ?>
+									
 								</tr>
 								<?php 
 							} ?>
@@ -91,7 +91,7 @@ $fecha = date('Y/m/d');
 				</div>
 			</div>
 		</main>
-		<?php include('AgregarTeacher.php');  include "../temp/03.php"; ?>
+		<?php include "../temp/03.php"; ?>
 	</div>
 </div>
 
