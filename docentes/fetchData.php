@@ -28,7 +28,7 @@ $columns = array(
         'db'        => 'estatus', 
         'dt'        => 4, 
         'formatter' => function( $d, $row ) { 
-            return ($d == 'A')?'Active':'Inactive'; 
+            return ($d == '1')?'Active':'Inactive'; 
         } 
     ),
 	array(

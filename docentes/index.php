@@ -45,17 +45,6 @@ $fecha = date('Y/m/d');
 									<th class="text-center">Opciones</th>
 								</tr>
 							</thead>
-							
-							<tfoot>
-								<tr>
-									<th class="text-center">Nombre(s)</th>
-									<th class="text-center">Apellidos</th>
-									<th class="text-center">Correo</th>
-									<th class="text-center">Rol</th>
-									<th class="text-center">Estatus</th>
-									<th class="text-center">Opciones</th>
-								</tr>
-							</tfoot>
 						</table>
 					</div>
 				</div>
