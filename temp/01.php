@@ -54,7 +54,7 @@ include "../db/conect.php";
 <script src="<?php echo $server_name; ?>lib/js/chart-bar-demo.js"> </script>
 <script src="<?php echo $server_name; ?>lib/js/duplicador.js"> </script>
 
-<script src="<?php echo $server_name; ?>lib/DataTables/datatables.js"></script>
+<!-- <script src="<?php echo $server_name; ?>lib/DataTables/datatables.js"></script> -->
 
 <!-- Template Main JS File -->
 <script src="<?php echo $server_name; ?>lib/js/main.js"> </script>
