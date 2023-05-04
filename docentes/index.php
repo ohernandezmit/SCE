@@ -45,37 +45,7 @@ $fecha = date('Y/m/d');
 									<th class="text-center">Opciones</th>
 								</tr>
 							</thead>
-							<tbody>
-								<?php
-								$sq="SELECT * FROM usuarios WHERE estatus='1'";
-								$rs=$mysqli->query($sq);
-								while ($row=$rs->fetch_array(MYSQLI_ASSOC)) {
-									if ($row['estatus']==1) { $activo = "Activo"; } else { $activo = "Inactivo"; }
-									
-									$edit = '<div class="btn-group">
-		                                <button type="button" class="btn btn-outline-success btn2" data-bs-toggle="dropdown" aria-expanded="false" >
-		                                    <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#edit_'.$row['id'].'"></i>
-		                                </button>
-		                            </div>';
-		                            
-									$delete = '<div class="btn-group">
-		                                <button type="button" class="btn btn-outline-danger btn2" data-bs-toggle="dropdown" aria-expanded="false" >
-		                                    <i class="bi bi-trash" data-bs-toggle="modal" data-bs-target="#delete_'.$row['id'].'"></i>
-		                                </button>
-		                            </div>';
-								?>
-								<tr>
-									<th scope="row"><?php echo $row['nombre']; ?></th>
-									<td><?php echo $row['apellidos']; ?></td>
-									<td><?php echo $row['correo']; ?></td>
-									<td class="text-center"><?php echo $row['rol']; ?></td>
-									<td class="text-center"><?php echo $activo; ?></td>
-									<td class="text-center"><?php echo $edit.'&nbsp;&nbsp;'.$delete; ?></td>
-									
-								</tr>
-								<?php 
-							} ?>
-							</tbody>
+							
 							<tfoot>
 								<tr>
 									<th class="text-center">Nombre(s)</th>
