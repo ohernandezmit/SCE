@@ -1,4 +1,4 @@
-<?php
+<?php ini_set("display_errors","1");
 // Include config file 
 include "../db/var.php";
  

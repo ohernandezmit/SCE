@@ -66,19 +66,19 @@ $fecha = date('Y/m/d');
 </div>
 
 <script> 	
-	// Initialize DataTables API object and configure table
-    var table = $('#datatablesSimple').DataTable({
-        "processing": true,
-        "serverSide": true,
-        "ajax": "fetchData.php",
-        "columnDefs": [
-            { "orderable": false, "targets": 5 }
-        ]
-    });
+// Initialize DataTables API object and configure table
+var table = $('#datatablesSimple').DataTable({
+    "processing": true,
+    "serverSide": true,
+    "ajax": "fetchData.php",
+    "columnDefs": [
+        { "orderable": false, "targets": 5 }
+    ]
+});
 
-    $(document).ready(function(){
-        // Draw the table
-        table.draw();
-    });
+$(document).ready(function(){
+    // Draw the table
+    table.draw();
+});
  </script>
 
