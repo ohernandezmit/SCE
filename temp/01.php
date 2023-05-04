@@ -44,7 +44,6 @@ include "../db/conect.php";
 <script src="<?php echo $server_name; ?>lib/bootstrap/js/bootstrap.bundle.min.js"> </script>
 <script src="<?php echo $server_name; ?>lib/js/jquery.dataTables.min.js"> </script>
 <script src="<?php echo $server_name; ?>lib/tinymce/tinymce.min.js"> </script>
-<!-- <script src="<?php echo $server_name; ?>lib/js/jquery-3.5.1.js"> </script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="<?php echo $server_name; ?>lib/bootstrap/js/sidebars.js"> </script>
 <script src="<?php echo $server_name; ?>lib/js/scripts.js"> </script>
