@@ -66,54 +66,20 @@ $fecha = date('Y/m/d');
 </div>
 
 <script> 	
-	// Funcion para crear cuenta de usuarios
-	function crear_cuenta()
-    {
-        var nombre = document.getElementById("nombre").value;
-        var apellidos = document.getElementById("apellidos").value;
-        
-        document.getElementById("account").value = nombre + ' ' +  apellidos;
-        
-    };
-
-// Funcion para mostrar u ocultar div con los campos turno, nivel, grado y grupo
-$(document).ready(function() {
-        $('#name_format').on('change',function(){
-            var selectvalor = $(this).val(); //alert(selectvalor);
-            if (selectvalor == 'Docente') {
-                $('.masElementos').css('display','block');
-				$('.masElementos').css('tran','block');
-            } else {
-                $('.masElementos').css('display','none');
-            }
-        });
+	// Initialize DataTables API object and configure table
+    var table = $('#datatablesSimple').DataTable({
+        "processing": true,
+        "serverSide": true,
+        "ajax": "fetchData.php",
+        "order":[4, 'desc'],
+        "columnDefs": [
+            { "orderable": false, "targets": 5 }
+        ]
     });
-		
-$(document).ready(function(){
-	// Funcion para llenado de niveles  
-		
-	$("#select_turno").on('change', function () {
-			$("#select_turno option:selected").each(function () {
-				var turno = $(this).val();
-				//alert(turno);
-				$.post("consulta_nivel.php", { turno: turno }, function(data) {
-					$("#select_nivel").html(data);
-				});			
-			});
-	});
 
-	// Funcion para llenado de grado y grupo 
-
-	$("#select_nivel").on('change', function () {
-			$("#select_nivel option:selected").each(function () {
-				var nivel = $(this).val();
-				//alert(nivel);
-				$.post("consulta_grado.php", { nivel: nivel }, function(data) {
-					$("#select_grado").html(data);
-				});			
-			});
-	});
-
-});
+    $(document).ready(function(){
+        // Draw the table
+        table.draw();
+    });
  </script>
 
